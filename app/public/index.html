@@ -1,26 +1,537 @@
-<html>
+<!DOCTYPE html>
+<html lang="ch">
+
 <head>
-	<title>StarsHome</title>
-	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>天马星</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="css/freelancer.css" rel="stylesheet">
+
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.useso.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="http://fonts.useso.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
 </head>
-<body data-ng-app='app'>
-	<script type="text/javascript" src="lib/angular/angular.js"></script>
-	<script type="text/javascript" src="lib/angular-ui-router/release/angular-ui-router.js"></script>
-	<div>
-		below is the data-ui-view
+
+<body id="page-top" class="index">
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header page-scroll">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#page-top">星星家园</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="hidden">
+					<a href="#page-top"></a>
+				</li>
+				<li class="page-scroll">
+					<a href="#portfolio">业务项目</a>
+				</li>
+				<li class="page-scroll">
+					<a href="#about">关于我们</a>
+				</li>
+				<li class="page-scroll">
+					<a href="#contact">联系我们</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
 	</div>
-	
-	<div data-ui-view="">
+	<!-- /.container-fluid -->
+</nav>
 
+<!-- Header -->
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<img class="img-responsive" src="img/profile.png" alt="">
+				<div class="intro-text">
+					<span class="name">欢迎进入天马星·星星家园</span>
+					<hr class="star-light">
+					<span class="skills">不必等待，让星光从校园里开始闪耀</span>
+				</div>
+			</div>
+		</div>
 	</div>
+</header>
 
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>业务项目</h2>
+				<hr class="star-primary">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 portfolio-item">
+				<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						</div>
+					</div>
+					<img src="img/portfolio/cabin.png" class="img-responsive" alt="">
+				</a>
+			</div>
+			<div class="col-sm-4 portfolio-item">
+				<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						</div>
+					</div>
+					<img src="img/portfolio/cake.png" class="img-responsive" alt="">
+				</a>
+			</div>
+			<div class="col-sm-4 portfolio-item">
+				<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						</div>
+					</div>
+					<img src="img/portfolio/circus.png" class="img-responsive" alt="">
+				</a>
+			</div>
+			<div class="col-sm-4 portfolio-item">
+				<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						</div>
+					</div>
+					<img src="img/portfolio/game.png" class="img-responsive" alt="">
+				</a>
+			</div>
+			<div class="col-sm-4 portfolio-item">
+				<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						</div>
+					</div>
+					<img src="img/portfolio/safe.png" class="img-responsive" alt="">
+				</a>
+			</div>
+			<div class="col-sm-4 portfolio-item">
+				<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+					<div class="caption">
+						<div class="caption-content">
+							<i class="fa fa-search-plus fa-3x"></i>
+						</div>
+					</div>
+					<img src="img/portfolio/submarine.png" class="img-responsive" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
 
+<!-- About Section -->
+<section class="success" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>关于我们</h2>
+				<hr class="star-light">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-2">
+				<p>武汉天马星网络技术有限公司是一家从事现代互联网+、物联网、人工智能等技术项目研发型企业。公司致力于将前沿的信息技术应用到项目中来，帮助各行各业实现互联网产业整合、平台资源共享以及产业升级。</p>
+			</div>
+			<div class="col-lg-4">
+				<p>星星家园是天马星公司开展的一向针对校园IT学生的一个计划。在这里，你可以参与实习项目，兼职项目，或者观摩项目。在校园里，就有机会获得世界一流IT公司项目研发的体验，培养互联网人才的职业素养。</p>
+			</div>
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<a href="#" class="btn btn-lg btn-outline">
+					<i class="fa fa-download"></i> 加入我们
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
 
+<!-- Contact Section -->
+<section id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>联系我们</h2>
+				<hr class="star-primary">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+				<!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+				<form name="sentMessage" id="contactForm" novalidate>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>姓名</label>
+							<input type="text" class="form-control" placeholder="姓名" id="name" required data-validation-required-message="请输入姓名">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>Email</label>
+							<input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="请输入email地址">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>电话</label>
+							<input type="tel" class="form-control" placeholder="电话" id="phone" required data-validation-required-message="请输入你的电话">
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<div class="row control-group">
+						<div class="form-group col-xs-12 floating-label-form-group controls">
+							<label>内容</label>
+							<textarea rows="5" class="form-control" placeholder="内容" id="message" required data-validation-required-message="请留言"></textarea>
+							<p class="help-block text-danger"></p>
+						</div>
+					</div>
+					<br>
+					<div id="success"></div>
+					<div class="row">
+						<div class="form-group col-xs-12">
+							<button type="submit" class="btn btn-success btn-lg">提交</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
 
-	<script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.js"></script>
-	<script type="text/javascript" src="lib/moment/moment.js"></script>
-	<script type="text/javascript" src="js/webapp.js"></script>
-	<script type="text/javascript" src="js/ui_router.js"></script>
+<!-- Footer -->
+<footer class="text-center">
+	<div class="footer-above">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col col-md-4">
+					<h3>地址</h3>
+					<p>东湖高新区<br>湖北武汉，中国</p>
+				</div>
+				<div class="footer-col col-md-4">
+					<h3>友情链接</h3>
+					<ul class="list-inline">
+						<li>
+							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+						</li>
+						<li>
+							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+						</li>
+						<li>
+							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+						</li>
+						<li>
+							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+						</li>
+						<li>
+							<a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+						</li>
+					</ul>
+				</div>
+<!-- 				<div class="footer-col col-md-4">
+					<h3>About Freelancer</h3>
+					<p>Freelance is a free to use, open source Bootstrap theme created Start Bootstrap.</p>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="footer-below">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					Copyright &copy; 2016.Pegasus Ltd. All rights reserved.
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+	<a class="btn btn-primary" href="#page-top">
+		<i class="fa fa-chevron-up"></i>
+	</a>
+</div>
+
+<!-- Portfolio Modals -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h2>Project Title</h2>
+						<hr class="star-primary">
+						<img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+						<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+						<ul class="list-inline item-details">
+							<li>Client:
+								<strong><a href="http://sc.chinaz.com">Start Bootstrap</a>
+								</strong>
+							</li>
+							<li>Date:
+								<strong><a href="http://sc.chinaz.com">April 2016</a>
+								</strong>
+							</li>
+							<li>Service:
+								<strong><a href="http://sc.chinaz.com">Web Development</a>
+								</strong>
+							</li>
+						</ul>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h2>Project Title</h2>
+						<hr class="star-primary">
+						<img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+						<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+						<ul class="list-inline item-details">
+							<li>Client:
+								<strong><a href="http://sc.chinaz.com">Start Bootstrap</a>
+								</strong>
+							</li>
+							<li>Date:
+								<strong><a href="http://sc.chinaz.com">April 2016</a>
+								</strong>
+							</li>
+							<li>Service:
+								<strong><a href="http://sc.chinaz.com">Web Development</a>
+								</strong>
+							</li>
+						</ul>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h2>Project Title</h2>
+						<hr class="star-primary">
+						<img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
+						<p>Use this area of the page to describe your project. The icon above is part of a free icon set Flat Icons. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+						<ul class="list-inline item-details">
+							<li>Client:
+								<strong><a href="http://sc.chinaz.com">Start Bootstrap</a>
+								</strong>
+							</li>
+							<li>Date:
+								<strong><a href="http://sc.chinaz.com">April 2016</a>
+								</strong>
+							</li>
+							<li>Service:
+								<strong><a href="http://sc.chinaz.com">Web Development</a>
+								</strong>
+							</li>
+						</ul>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h2>Project Title</h2>
+						<hr class="star-primary">
+						<img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
+						<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+						<ul class="list-inline item-details">
+							<li>Client:
+								<strong><a href="http://sc.chinaz.com">Start Bootstrap</a>
+								</strong>
+							</li>
+							<li>Date:
+								<strong><a href="http://sc.chinaz.com">April 2016</a>
+								</strong>
+							</li>
+							<li>Service:
+								<strong><a href="http://sc.chinaz.com">Web Development</a>
+								</strong>
+							</li>
+						</ul>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h2>Project Title</h2>
+						<hr class="star-primary">
+						<img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
+						<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+						<ul class="list-inline item-details">
+							<li>Client:
+								<strong><a href="http://sc.chinaz.com">Start Bootstrap</a>
+								</strong>
+							</li>
+							<li>Date:
+								<strong><a href="http://sc.chinaz.com">April 2016</a>
+								</strong>
+							</li>
+							<li>Service:
+								<strong><a href="http://sc.chinaz.com">Web Development</a>
+								</strong>
+							</li>
+						</ul>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-content">
+		<div class="close-modal" data-dismiss="modal">
+			<div class="lr">
+				<div class="rl">
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="modal-body">
+						<h2>Project Title</h2>
+						<hr class="star-primary">
+						<img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+						<p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+						<ul class="list-inline item-details">
+							<li>Client:
+								<strong><a href="http://sc.chinaz.com">Start Bootstrap</a>
+								</strong>
+							</li>
+							<li>Date:
+								<strong><a href="http://sc.chinaz.com">April 2016</a>
+								</strong>
+							</li>
+							<li>Service:
+								<strong><a href="http://sc.chinaz.com">Web Development</a>
+								</strong>
+							</li>
+						</ul>
+						<button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/cbpAnimatedHeader.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/freelancer.js"></script>
+
 </body>
+
 </html>
