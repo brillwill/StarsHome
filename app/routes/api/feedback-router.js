@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var _ = require("lodash");
 var uuid = require("node-uuid");
+var moment = require("moment");
 
 var feedbackData = require("../../feedback-data.json");
 
@@ -49,7 +50,25 @@ router.get('/deletebyid/:id', function(req, res){
 });
 
 router.post('/add', function(req, res){
-	
+	if(req.body.name && req.body.email && req.body.content){
+		var id = uuid.v4();
+		var momt = moment();
+
+		var feedback = {
+			name  : req.body.name,
+			email : req.body.email,
+			content  : req.body.content,
+			moment : momt,
+			id : id
+		}
+
+		feedbackData.push(feedback);
+
+		res.json({status:"success", body : { id : id}});
+	}
+	else {
+		res.json({status:"add failed!"});
+	}
 });
 
 

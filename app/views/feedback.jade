@@ -10,7 +10,9 @@ block content
             th 邮件地址
             th id
         tbody
-             each feedback in feedbacks
+          script(src="/js/test.js")
+          .container
+            each feedback in feedbacks
                     tr 
                         //td #{moment(feedback.moment).format()}
                         //td #{feedback.moment}
@@ -21,3 +23,4 @@ block content
                         td #{feedback.content}
                         td #{feedback.email}
                         td #{feedback.id}
+    button#testButton.btn.btn-default(type="button") TestHere
