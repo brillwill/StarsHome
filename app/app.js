@@ -1,12 +1,13 @@
 var express = require('express');
+var expsession = require("express-session");
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var users = require('./routes/users');
 var apiRouter = require("./routes/api/api-router");
+var auth = require("./auth");
 
 var app = express();
 
@@ -24,6 +25,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(expsession({
+  secret:"starhome",
+  resave:false,
+  saveUninitialized:false
+}));
+
+auth.configSession(app); 
+
+app.use('/auth',auth.router);
 
 app.use('/api', apiRouter);
 

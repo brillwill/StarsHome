@@ -3,6 +3,7 @@ var router = express.Router();
 var _ = require("lodash");
 var uuid = require("node-uuid");
 var moment = require("moment");
+var auth = require("../../auth");
 
 var feedbackData = require("../../feedback-data.json");
 
@@ -11,9 +12,8 @@ router.get('/getall', function(req, res){
 	
 });
 
-router.get('/getalltestview', function(req, res){
+router.get('/getalltestview', auth.authenticator ,function(req, res){
 	res.render('feedback', {feedbacks : feedbackData});
-
 });
 
 router.get('/getbyname/:name', function(req, res){
