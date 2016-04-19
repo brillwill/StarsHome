@@ -52,6 +52,7 @@ $(document).ready(function($) {
 		})
 		.done(function() {
 			console.log("success login");
+			window.location.assign("http://localhost:3000/api/feedback/getalltestview");
 		})
 		.fail(function() {
 			console.log("error login");

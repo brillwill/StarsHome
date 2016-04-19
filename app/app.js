@@ -5,9 +5,17 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var apiRouter = require("./routes/api/api-router");
 var auth = require("./auth");
+
+var mongoDBUrl = "mongodb://127.0.0.1:27017/stars";
+mongoose.connect(mongoDBUrl, function(err){
+  if (err) {
+    console.log("mongo db connect fail!" + err);
+  };
+});
 
 var app = express();
 
@@ -24,6 +32,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 
 app.use(expsession({
   secret:"starhome",
