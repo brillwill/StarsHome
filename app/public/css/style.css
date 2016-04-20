@@ -373,12 +373,12 @@ a:hover, a:focus, a:active {
 .effects .hover-img .fh5co-projects-overlay h3 {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 38px;
   font-weight: 300;
 }
 .effects .hover-img .fh5co-projects-overlay .from-top {
   position: absolute;
-  top: 50%;
+  top: 40%;
   display: block;
   text-align: center;
   width: 100%;
@@ -389,14 +389,14 @@ a:hover, a:focus, a:active {
 }
 .effects .hover-img .fh5co-projects-overlay .from-top .category {
   display: block;
-  font-size: 13px;
+  font-size: 20px;
   color: #ccc;
   letter-spacing: .1em;
   padding-top: 5px;
 }
 .effects .hover-img .fh5co-projects-overlay .fh5co-projects-action {
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   text-align: center;
   width: 100%;
   -moz-transition: all 0.5s ease;
@@ -406,8 +406,8 @@ a:hover, a:focus, a:active {
 }
 .effects .hover-img .fh5co-projects-overlay .goto-preview, .effects .hover-img .fh5co-projects-overlay .goto-details {
   color: #fff;
-  font-size: 20px;
-  padding: 20px;
+  font-size: 30px;
+  padding: 40px;
 }
 .effects .hover-img.hovered .fh5co-projects-overlay,
 .effects .hover-img.hovered .from-top,
