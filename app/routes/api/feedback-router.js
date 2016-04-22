@@ -119,7 +119,7 @@ router.post('/add', function(req, res){
 		res.json({status:success, body : { id : feedback._id}});
 	}
 	else {
-		res.json({status:"add failed! - Invalid arguments."});
+		res.sendStatus(422);
 	}
 });
 

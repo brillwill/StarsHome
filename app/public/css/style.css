@@ -584,7 +584,7 @@ a:hover, a:focus, a:active {
 }
 
 /* Helper Classes */
-.btn.btn-primary {
+/*.btn.btn-primary {
   background: #87b6c4;
   color: #fff;
   border: none;
@@ -632,7 +632,7 @@ a:hover, a:focus, a:active {
   text-transform: uppercase;
   letter-spacing: .2em;
 }
-
+*/
 .fh5co-image-text {
   margin-bottom: 3em;
   float: left;
@@ -857,7 +857,7 @@ a:hover, a:focus, a:active {
   color: #fff;
 }
 
-.form-control {
+/*.form-control {
   box-shadow: none;
   border: 2px solid #ccc;
   font-size: 20px;
@@ -875,7 +875,7 @@ a:hover, a:focus, a:active {
   box-shadow: none;
   border: 2px solid #87b6c4;
 }
-
+*/
 #fh5co-footer-links {
   margin-bottom: 3em;
 }
