@@ -6,9 +6,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-
-var apiRouter = require("./routes/api/api-router");
-var auth = require("./auth");
+var auth = require("./authenticator/auth");
+var router = require("./routes/router");
 
 var mongoDBUrl = "mongodb://127.0.0.1:27017/stars";
 mongoose.connect(mongoDBUrl, function(err){
@@ -23,6 +22,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+//static serv folder setup
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules/moment/min')));
 
@@ -42,18 +42,8 @@ app.use(expsession({
 
 auth.configSession(app); 
 
-app.use('/auth',auth.router);
 
-app.use('/api', apiRouter);
-
-// app.use('/users', users);
-
-// // catch 404 and forward to error handler
-// app.use(function(req, res, next) {
-//   var err = new Error('Not Found');
-//   err.status = 404;
-//   next(err);
-// });
+router.setupRouters(app);
 
 // error handlers
 
