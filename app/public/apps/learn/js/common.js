@@ -25,7 +25,9 @@ function populateFooter() {
         url = pagePath + url;
     }
 
-    $("footer").load(url);
+    $.get(url, function (data) {
+        $("footer").replaceWith(data);
+    });
 }
 
 function onDay(day) {
@@ -35,4 +37,17 @@ function onDay(day) {
     }
 
     window.location.href = url;
+}
+
+function onContents() {
+    if (pagePath) {
+        window.location.href = pagePath;
+    }
+}
+
+function commonDOMInitWithPagePath(path) {
+    pagePath = path;
+
+    populateHeader();
+    populateFooter();
 }

@@ -14,17 +14,163 @@
 <body>
 
 <header></header>
+
+<div class="bs-docs-header" id="content" tabindex="-1">
+    <div class="container">
+        <h1>互联网App</h1>
+        <p>让我们从现代移动互联网典型架构开始谈起...</p>
+    </div>
+</div>
+
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <h1 id="idSection1" class="page-header">1.典型架构</h1>
+                <p class="lead">
+                    互联网应用已经不是简单的传统门户网站。
+                </p>
+
+                <div class="thumbnail">
+                    <img src="img/architecture.png" alt="互联网app典型架构图">
+                    <p>图1-1 移动互联网典型应用架构</p>
+                </div>
+
+                <div class="alert alert-info" role="alert">
+                    <p>从终端的形势来看,有手机、智能电视等这样不断丰富的智能终端可以接入。</p>
+                </div>
+
+                <div class="alert alert-info" role="alert">
+                    <p>从后台能力的角度看,用户更加希望能够在app内部完成整个业务的完整流程。比如,电子商务的商品浏览,选定商品,
+                        下单,支付,收货,售后等完整的生命周期。单一部分功能的网站,大都已经发展困难了,比如传统门户。</p>
+                </div>
+
+                <div class="alert alert-info" role="alert">
+                    <p>从基础设计角度看, 越来越多的应用正在像"云"上迁移,云时代已经到来。</p>
+                </div>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection2" class="page-header">2.常用技术</h1>
+                <p class="lead">没有所谓的杀手锏技术, 往往有各种原因使用各种技术。但万变不离其宗。</p>
+                <div class="">
+                    <table class="table table-bordered table-striped">
+                        <caption>
+                            表1-1 部分常用技术
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>类别</th>
+                                <th>典型技术</th>
+                                <th>开发语言</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>web前端</td>
+                                <td>HTML5,Javascript,CSS3,JQuery,Bootstrap,AngularJS,DOJO,D3...</td>
+                                <td>js/html/css</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>iOS设备</td>
+                                <td>原生应用开发:iOS SDK, OpenGL, Cocos2d, Unity3d <br>混合应用:Ionic/Cordova...</td>
+                                <td>Swift, Objective C, js/html/css</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Android设备</td>
+                                <td>原生应用开发:AndroidSDK, OpenGL, Cocos2d, Unity3d <br>混合应用:Ionic/Cordova...</td>
+                                <td>Java, js/html/css</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>后台应用</td>
+                                <td>PHP, Node.js, J2EE, .Net</td>
+                                <td>php, javascript, Java, C#</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>数据库</td>
+                                <td>MySQL, Oracle, DB2, MongoDB, CouchDB</td>
+                                <td>SQL, javascript</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection3" class="page-header">3.网络交互</h1>
+                <p class="lead">一切都是基于HTTP(S) - 有点不严谨,但还是要这么说</p>
+                <div class="thumbnail">
+                    <img src="img/tunnelconcept.png" alt="HTTP基本模型">
+                    <p>图1-2 HTTP基本模型</p>
+                </div>
+
+                <div class="alert alert-info" role="alert">
+                    <p><strong>HTTP</strong>是一个应用层协议,它就像一个管道一样,在网络上传输着各种<q>请求</q>和<q>响应</q>。APP和服务器交互的过程,本质上就是
+                        资源的请求和响应过程。那么服务器的主要工作,就是听懂你要什么,让后看情况给你什么。请求总是从客户端发起的,由服务器回应。</p>
+                </div>
+
+                <div class="thumbnail">
+                    <img src="img/httpprocess.png" alt="HTTP处理">
+                    <p>图1-3 HTTP的流程</p>
+                </div>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection4" class="page-header">4.JavaScript基础</h1>
+                <p class="lead">JavaScript 门槛并不高,用途确实很广</p>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
+                <ul class="nav bs-docs-sidenav">
+                    <li class="">
+                        <a href="#idSection1">典型架构</a>
+                    </li>
+                    <li class="">
+                        <a href="#idSection2">常用技术</a>
+                    </li>
+                    <li class="">
+                        <a href="#idSection3">网络交互</a>
+                    </li>
+                    <li class="">
+                        <a href="#idSection4">JavaScript基础</a>
+                    </li>
+                    <li class="">
+                        <a href="#whats-included">包含的内容</a>
+                        <ul class="nav">
+                            <li class=""><a href="#whats-included-precompiled">预编译版</a></li>
+                            <li class=""><a href="#whats-included-source">Bootstrap 源码</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a class="back-to-top" href="#top">
+                    返回顶部
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<footer></footer>
 <script>
-    setPagePath("../");
-    populateHeader();
+    commonDOMInitWithPagePath('../');
 </script>
-
-
-<footer class="bs-docs-footer" role="contentinfo"></footer>
-<script>
-    populateFooter();
-</script>
-
 
 <link rel="stylesheet/less" href="../css/common.less">
 <script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
