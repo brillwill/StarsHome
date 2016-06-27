@@ -7,70 +7,24 @@
     <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://v3.bootcss.com/assets/css/docs.min.css">
 
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
-    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href=# class="navbar-brand">星星战队</a>
-            </div>
-            <nav id="bs-navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="day1/main.html">Day 1</a>
-                    </li>
-
-                    <li>
-                        <a href="day2/main.html">Day 2</a>
-                    </li>
-
-                    <li>
-                        <a href="day3/main.html">Day 3</a>
-                    </li>
-
-                    <li>
-                        <a href="day4/main.html">Day 4</a>
-                    </li>
-
-                    <li>
-                        <a href="day5/main.html">Day 5</a>
-                    </li>
-
-                    <li>
-                        <a href="day6/main.html">Day 6</a>
-                    </li>
-
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://www.bootcss.com/" >总目录</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="bs-docs-header" id="content" tabindex="-1">
-        <div class="container">
-            <h1>技能学习</h1>
-            <p>在开始项目前,团队针对关键知识技能进行集中学习,以减轻后期项目风险。</p>
-        </div>
-    </div>
+    <header></header>
+    <script>
+        populateHeader();
+    </script>
 
     <div class="container bs-docs-container">
         <div class="bs-docs-section">
             <h1 id="contents" class="page-header">
                 目录
             </h1>
-
             <p class="lead">
-                星星战队6次集中学习的内容,可以在这里找到。持续更新中...
+                星星战队历次集中学习的内容,可以在这里找到。持续更新中...
             </p>
-
             <table class="table table-bordered table-strip">
                 <tr>
                     <th>日程</th>
@@ -79,7 +33,7 @@
                 </tr>
                 <tr>
                     <td>Day1</td>
-                    <td>互联网应用架构与关键技术;js基础</td>
+                    <td><a href="day1/main.html">互联网应用架构与关键技术;js基础</a></td>
                     <td>2016.7.2</td>
                 </tr>
                 <tr>
@@ -117,45 +71,14 @@
 
     </div>
 
-    <footer class="bs-docs-footer" role="contentinfo">
-        <div class="container">
 
-            <p><q>星星战队</q>是一个致力于学习并实践业界成功项目经验的学生技术团队。</p>
-            <ul class="bs-docs-footer-links text-muted">
-                <li>当前版本： v0.0.1</li>
-                <li>·</li>
-                <li><a href="../recruit/jxgcs.html">团队招募</a></li>
-                <li>·</li>
-                <li><a href="#">关于</a></li>
-
-<!--
-                <li><a href="../getting-started/#examples">实例精选</a></li>
-                <li>·</li>
-                <li><a href="http://v2.bootcss.com/">v2.3.2 中文文档</a></li>
-                <li>·</li>
-                <li><a href="../about/">关于</a></li>
-                <li>·</li>
-                <li><a href="http://expo.bootcss.com">优站精选</a></li>
-                <li>·</li>
-                <li><a href="http://blog.getbootstrap.com">官方博客</a></li>
-                <li>·</li>
-                <li><a href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
-                <li>·</li>
-                <li><a href="https://github.com/twbs/bootstrap/releases">历史版本</a></li>
--->
-            </ul>
-
-            <div>&copy; 2016 武汉星云智慧科技有限公司</div>
-        </div>
-    </footer>
-
-
+    <footer class="bs-docs-footer" role="contentinfo"></footer>
+    <script>
+        populateFooter();
+    </script>
 
 
     <link rel="stylesheet/less" href="css/common.less">
     <script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
-
-    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
