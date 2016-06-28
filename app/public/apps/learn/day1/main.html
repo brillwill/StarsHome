@@ -118,6 +118,49 @@
                     <img src="img/httpprocess.png" alt="HTTP处理">
                     <p>图1-3 HTTP的流程</p>
                 </div>
+
+                <button class="btn btn-primary" role="button" data-toggle="collapse" data-target="#httpPackets"
+                        aria-expanded="false" aria-controls="http packets">
+                    例子:HTTP包
+                </button>
+                <div class="collapse" id="httpPackets">
+                    <div class="well">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="thumbnail">
+                                    客户端请求: <br>
+                                    GET /sample.jsp HTTP/1.1 <br>
+                                    Accept:image/gif.image/jpeg,*/* <br>
+                                    Accept-Language:zh-cn <br>
+                                    Connection:Keep-Alive <br>
+                                    Host:localhost <br>
+                                    User-Agent:Mozila/4.0(compatible;MSIE5.01;Window NT5.0) <br>
+                                    Accept-Encoding:gzip,deflate <br>
+                                    <br><br>
+                                    username=jinqiao&password=1234 <br>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="thumbnail">
+                                    服务器响应: <br>
+                                    HTTP/1.1 200 OK <br>
+                                    Server:Apache Tomcat/5.0.12 <br>
+                                    Date:Mon,6Oct2003 13:23:42 GMT <br>
+                                    Content-Length:112 <br>
+                                    <br>
+                                    &lt;html&gt;
+                                    &lt;head&gt;
+                                    &lt;title&gt;HTTP响应示例&lt;title&gt;
+                                    &lt;&#47;head&gt;
+                                    &lt;body&gt;
+                                    Hello HTTP!
+                                    &lt;&#47;body&gt;
+                                    &lt;&#47;html&gt;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="bs-docs-section">
                 <h1 id="idSection4" class="page-header">4.JavaScript</h1>
