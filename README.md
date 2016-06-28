@@ -1,2 +1,3 @@
 # StarsHome
-This the IT foundation StarsHome project.
+This is the IT foundation of StarsHome project. 
+
