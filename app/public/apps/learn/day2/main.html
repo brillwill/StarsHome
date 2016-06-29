@@ -12,24 +12,251 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sideNav">
 
-<header></header>
+    <header></header>
 
-<div class="bs-docs-header" id="content" tabindex="-1">
-    <div class="container">
-        <h1>Web前端技术</h1>
-        <p>HTML5技术集给用户带来前了所未有的极致WebApp体验</p>
+    <div class="bs-docs-header" id="content" tabindex="-1">
+        <div class="container">
+            <h1>Web前端技术</h1>
+            <p>HTML5技术集给用户带来前了所未有的极致WebApp体验</p>
+        </div>
     </div>
-</div>
 
-<footer></footer>
-<script>
-    commonDOMInitWithPagePath('../');
-</script>
+    <!--main body of this page-->
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9" role="main">
+                <div class="bs-docs-section">
+                    <h1 id="idSection1" class="page-header">1.CSS</h1>
+                    <p class="lead">
+                        提高颜值,&nbsp;给web添加样式与布局
+                    </p>
 
-<link rel="stylesheet/less" href="../css/common.less">
-<script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
+                    <h2 id="idSection1-1">初识CSS</h2>
+                    <div class="thumbnail">
+                        <img src="http://www.runoob.com/images/selector.gif" alt="CSS 结构">
+                        <p>图1-1 CSS结构</p>
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        Selector是一个表达式,&nbsp;用来选择要添加CSS的HTML元素。最常见的选择器是id选择器(#someId),
+                        &nbsp;和class选择器(.someClass)。
+                        Declaration是CSS生命的内容,&nbsp;它由若干属性和值组成。
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        这个行CSS的意思是,&nbsp;选择h1标题元素并把它(们)的颜色设为蓝色,&nbsp;字体大小设为12像素。
+                    </div>
+
+                    <h2 id="idSection1-2">CSS用起来</h2>
+                    <p>可以通过三种途径来应用CSS</p>
+                    <h3>外部样式表</h3>
+                    <p>大多采用这种方式,&nbsp;将CSS存成.css文件并引入到html中</p>
+                    <pre>
+&lt;head&gt;
+&lt;link rel="stylesheet" href="mystyle.css"&gt;
+&lt;&sol;head&gt;
+                    </pre>
+                    <h3>内联样式表</h3>
+                    <p>混杂在HTML的元素属性中, &nbsp;工程中不推荐这种,&nbsp;但有时候调试比较方便。</p>
+                    <pre>
+&lt;p style &equals; &quot;color:blue, margin-left:20px&quot;&gt;This is a paragraph.&lt;&sol;p&gt;
+                    </pre>
+                    <h3>内部样式表</h3>
+                    <p>将css以style元素的方式添加到html中,用的不是很多</p>
+                    <pre>
+&lt;head&gt;
+&lt;style&gt;
+h1 {color:blue}
+&lt;&sol;style&gt;
+&lt;&sol;head&gt;
+                    </pre>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>层叠次序</strong> <br>
+                        当同一个HTML的元素被不止一个样式定义时候,&nbsp;谁会生效呢?&nbsp;答案是,&nbsp;在属性的粒度上层叠覆盖,&nbsp;后出现的优先级高。
+                        一般有以下原则:
+                        <ol>
+                            <li>浏览器缺省设置</li>
+                            <li>外部样式表</li>
+                            <li>内部样式表</li>
+                            <li>内联样式</li>
+                        </ol>
+                        其中内联样式的优先级最高。
+                    </div>
+
+                    <h2 id="idSection1-3">CSS盒子模型</h2>
+                    <p>浏览器中的元素都是以矩形模型来渲染的,&nbsp;因此它可以有一下度量:</p>
+                    <div class="thumbnail">
+                        <img src="http://www.runoob.com/images/box-model.gif" alt="CSS 盒子模型">
+                        <p>图1-2 CSS盒子模型</p>
+                    </div>
+                    <p>在考虑元素宽度和高度的时候,&nbsp;需要结合盒子模型,&nbsp;来设置width padding border margin</p>
+
+                    <h2 id="idSection1-4">CSS布局</h2>
+                    <h3>Display和Visibility</h3>
+                    <p>Display属性用来提示元素如何被显示,会影响布局。Visibility定义元素是否可见,即使不可见也不影响布局。</p>
+                    <div class="alert alert-info" role="alert">
+                        <ul>
+                            <li>display:none与visibility:hidden</li>
+                            <li>display:block&nbsp;占用全部的宽度,有换行</li>
+                            <li>display:inline&nbsp;占用必要的宽度,无换行</li>
+                        </ul>
+                    </div>
+                    <h3>定位Position</h3>
+                    <table class="table table-bordered table-striped">
+                        <caption>表1-1 四中定位方式</caption>
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>设置</th>
+                                <th>是否在正常流中</th>
+                                <th>left&sol;right&sol;top&sol;down&sol;的作用</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>position:static</td>
+                                <td>是</td>
+                                <td>没有作用</td>
+                                <td>默认值</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>position:fixed</td>
+                                <td>否</td>
+                                <td>相对于浏览器的位置</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>position:relative</td>
+                                <td>是</td>
+                                <td>相对于流中正常值的位置</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>position:absolute</td>
+                                <td>否</td>
+                                <td>相对于已定位的父元素的位置</td>
+                                <td>没有这样的父元素,就相对于html</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="alert alert-info">
+                        重叠的情况<br>
+                        z-index属性定义了顺序,越大越叠在上面
+                    </div>
+                    <h3>浮动float</h3>
+                    <p>
+                        <code>float:left</code><br>
+                        <code>float:right</code><br>
+                        元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。<br>
+                        一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。<br>
+                        浮动元素之后的元素将围绕它。<br>
+                        浮动元素之前的元素将不会受到影响。<br>
+                        如果图像是右浮动，下面的文本流将环绕在它左边. <br>
+                    </p>
+
+                    <h2 id="idSection1-5">CSS3动画</h2>
+                    <p>动画,就是定义某些值得渐进变化过程。</p>
+                    <div class="show-board">
+                        <div class="show-brick"></div>
+                    </div>
+                    CSS code:
+                    <pre>
+@keyframes moving {
+  from {
+    left: 0px;;
+  }
+
+  to {
+    left:200px;
+  }
+}
+
+@-webkit-keyframes moving {
+  from {
+    left: 0px;;
+  }
+
+  to {
+    left:200px;
+  }
+}
+
+.show-brick {
+  position: relative;
+  width:44px;
+  height:44px;
+  left:0px;
+  top:20px;
+  background-color: red;
+  -webkit-animation:moving 5s linear 3s infinite alternate;
+  animation:moving 5s linear 3s infinite alternate;
+}
+
+                    </pre>
+
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="idSection2" class="page-header">2.Bootstrap</h1>
+                    <p class="lead">没有所谓的杀手锏技术, 往往有各种原因使用各种技术。但万变不离其宗。</p>
+
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="idSection3" class="page-header">3.jQuery</h1>
+                    <p class="lead">一切都是基于HTTP(S) - 有点不严谨,但还是要这么说</p>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="idSection4" class="page-header">4.学习参考</h1>
+                    <p class="lead">JavaScript 门槛并不高,用途确实很广</p>
+                </div>
+            </div>
+
+            <div class="col-md-3" role="complementary" id="sideNav">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
+                    <ul class="nav bs-docs-sidenav">
+                        <li class="active">
+                            <a href="#idSection1">典型架构</a>
+                        </li>
+                        <li class="">
+                            <a href="#idSection2">常用技术</a>
+                        </li>
+                        <li class="">
+                            <a href="#idSection3">网络交互</a>
+                        </li>
+                        <li class="">
+                            <a href="#idSection4">JavaScript</a>
+                            <ul class="nav">
+                                <li><a href="#idSection4-1">基础学习</a></li>
+                                <li><a href="#idSection4-2">进阶学习</a></li>
+                                <li><a href="#idSection4-3">练习</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <a class="back-to-top" href="#top">
+                        返回顶部
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--end of main body content-->
+
+
+
+
+    <footer></footer>
+    <script>
+        commonDOMInitWithPagePath('../');
+    </script>
+
+    <link rel="stylesheet/less" href="../css/common.less">
+    <link rel="stylesheet/less" href="./css/day2Style.less">
+    <script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
 
 </body>
 </html>
