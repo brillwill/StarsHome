@@ -12,7 +12,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sideNav">
 
 <header></header>
 
@@ -22,6 +22,251 @@
         <p>没有我,再好的体验都是一锤子买卖</p>
     </div>
 </div>
+
+<!--main body of this page-->
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <h1 id="idSection1" class="page-header">1.MySQL</h1>
+                <p class="lead">
+                    互联网应用用的最广泛的关系型数据库
+                </p>
+                <h2 id="idSection1-1">关系型数据库RDB</h2>
+                <p>二维表来表示实体的模型</p>
+                <div>
+                    <!--<button class="btn btn-primary" data-toggle="collapse" data-target="#rdbDemo" aria-expanded="false">示例</button>-->
+                    <!--<br>-->
+                    <div class="" id="rdbDemo">
+                        <table class="table table-bordered">
+                            <caption>
+                                表1-1 用户表
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>name</th>
+                                    <th>sex</th>
+                                    <th>birthday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>张三</td>
+                                    <td>男</td>
+                                    <td>1990-3-2</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>张时</td>
+                                    <td>男</td>
+                                    <td>1990-4-2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>张无</td>
+                                    <td>男</td>
+                                    <td>1990-5-2</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>王二</td>
+                                    <td>女</td>
+                                    <td>1990-12-2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered">
+                            <caption>表1-2 选课表</caption>
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>user_id</th>
+                                    <th>course</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>操作系统</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>Web开发</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>算法设计</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h2 id="idSection1-2">SQL</h2>
+                <p>RDB通过SQL语言来进行操作,我们以MySQL数据库为例来看几个例子</p>
+                <div>
+                    <!--<button class="btn btn-primary" data-toggle="collapse" data-target="#sqlDemo" aria-expanded="false">示例</button>-->
+                    <!--<br>-->
+                    <div id="sqlDemo" class="">
+                        <div class="well">
+                            DDL:
+                            <pre>
+CREATE TABLE user (
+                user_id INT NOT NULL AUTO_INCREMENT,
+                name VARCHAR(100) NOT NULL,
+                sex VARCHAR(8) NOT NULL,
+                birthday DATE,
+                PRIMARY KEY(user_id)
+);
+                            </pre>
+                            INSERT:
+                            <pre>
+INSERT INTO user (name, sex, birthday) VALUES ("Jim Green", "Male", "2003-05-05");
+                            </pre>
+                            QUERY:
+                            <pre>
+SELECT * from user WHERE name = "Jim Green";
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="idSection1-3">MySQL安装</h2>
+                <a href="http://dev.mysql.com/downloads/" target="_blank">MySQL Community Server</a>
+                <p>网上有很多相关的安装教程</p>
+                <h2 id="idSection1-4">在Node.js上使用</h2>
+                <p>可以通过mysql模块来连接使用MySQL</p>
+                <div class="well">
+                    Install: <br>
+                    <code>$ npm install mysql --save</code> <br>
+                    Example: <br>
+                    <pre>
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'me',
+  password : 'secret',
+  database : 'my_db'
+});
+
+connection.connect();
+
+connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is: ', rows[0].solution);
+});
+
+connection.end();
+                    </pre>
+                </div>
+
+
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection2" class="page-header">2.MongoDB</h1>
+                <p class="lead">Node.js的好基友,&nbsp;流行的NoSQL DB</p>
+                <h2 id="idSection2-1">基于文档的数据库</h2>
+                <div class="thumbnail">
+                    <img src="./img/concept.png" alt="MongoDB Concept">
+                    <p>图2-1 MongoDB 基本概念</p>
+                </div>
+                <h2 id="idSection2-2">MongoDB安装</h2>
+                <a href="http://www.mongodb.org/downloads">官网下载安装</a>
+                <p>网上有很多相关文章。安装完成之后,可以用MongoDB的命令行测试下是否成功。</p>
+                <p>比如 <code>show dbs</code> </p>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection3" class="page-header">3.Mongoose</h1>
+                <p class="lead">Node.js平台上的MongoDB对象建模工具</p>
+                <h2 id="idSection3-1">使用示例</h2>
+                <div class="well">
+                    <pre>
+// Bring Mongoose into the project
+var mongoose = require( 'mongoose' );
+var dbURI = 'mongodb://localhost/mydatabase';
+mongoose.connect(dbURI);
+
+var userSchema = new mongoose.Schema({
+     name: String,
+     email: String,
+     createdOn: Date,
+     verified: Boolean
+   });
+
+var User = mongoose.model('User', userSchema);
+
+var userOne = new User({ name: 'Simon' });
+userTwo.save(function (err) {
+     if (err) return handleError(err);
+     // userTwo (Sally) is saved!
+   });
+
+User.findOne({'name' : 'Sally', function(err,user) {
+   if(!err){
+     console.log(user);
+} });
+
+mongoose.connection.close(function () {
+     console.log('Mongoose default connection closed');
+});
+                    </pre>
+                </div>
+                <h2 id="idSection3-2">阅读</h2>
+                <a href="http://share.weiyun.com/34a96f7c70b822f59cf052a97155c792" target="_blank"> <cite>Mongoose For Application Development</cite></a>
+                <p>（密码：SHgv）</p>
+
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection4" class="page-header">4.练习</h1>
+                <p class="lead">可以构建一个完整的WebApp了</p>
+            </div>
+        </div>
+
+        <div class="col-md-3" role="complementary" id="sideNav">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
+                <ul class="nav bs-docs-sidenav">
+                    <li class="active">
+                        <a href="#idSection1">MySQL</a>
+                        <ul class="nav">
+                            <li><a href="#idSection1-1">关系型数据库RDB</a></li>
+                            <li><a href="#idSection1-2">SQL</a></li>
+                            <li><a href="#idSection1-3">安装</a></li>
+                            <li><a href="#idSection1-4">在Node.js上使用</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection2">MongoDB</a>
+                        <ul class="nav">
+                            <li><a href="#idSection2-1">基于文档的DB</a></li>
+                            <li><a href="#idSection2-2">安装</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection3">Mongoose</a>
+                        <ul class="nav">
+                            <li><a href="#idSection3-1">使用示例</a></li>
+                            <li><a href="#idSection3-2">阅读</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection4">练习</a>
+                    </li>
+
+                </ul>
+                <a class="back-to-top" href="#top">
+                    返回顶部
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--end of main body content-->
+
+
 
 <footer></footer>
 <script>
