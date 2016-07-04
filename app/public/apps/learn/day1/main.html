@@ -10,6 +10,7 @@
 
     <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//cdn.bootcss.com/lodash.js/4.13.1/lodash.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
 <body data-spy="scroll" data-target="#sideNav">
@@ -164,9 +165,83 @@
                     </div>
                 </div>
                 <div class="bs-docs-section">
-                    <h1 id="idSection4" class="page-header">4.JavaScript</h1>
+                    <h1 id="idSection4" class="page-header">4.HTML5/JavaScript</h1>
                     <p class="lead">JavaScript 门槛并不高,用途确实很广</p>
                     <h2 id="idSection4-1">基础学习</h2>
+                    <h3>HTML</h3>
+                    <a href="./html/sampleHTML.html" target="_blank">Sample html</a>
+                    <div class="">
+                        <img src="./img/htmlDemo.png" class="img-rounded" alt="html demo">
+                    </div>
+
+                    <h3>JavaScript Example</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="well">
+                                <ul>
+                                    <li>String</li>
+                                    <li>Number</li>
+                                    <li>Boolean</li>
+                                    <li>Object
+                                        <ul>
+                                            <li>Array</li>
+                                            <li>Date</li>
+                                            <li>Function</li>
+                                            <li>RegExp</li>
+                                        </ul>
+                                    </li>
+                                    <li>Null</li>
+                                    <li>Undefined</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="">
+                                <pre>
+HTML:
+&lt;input type="text" id="inputId"&gt;
+&lt;a onclick="handleClick()"&gt;Send&lt;&sol;a&gt;
+
+JavaScript:
+function handleClick(){
+    var input = document.getElementById("inputId");
+    var text = input.value;
+    alert(text);
+}
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>JavaScript Essential Checklist</h3>
+                    <div class="row">
+                        <div class="well">
+                            ECMAScript
+                            <ul>
+                                <li>JavaScript中的类型转换</li>
+                                <li>作用域、作用域链和闭包</li>
+                                <li>函数与函数表达式</li>
+                                <li>arguments对象</li>
+                                <li>call与apply的应用</li>
+                                <li>callee与caller的应用</li>
+                                <li>原型和原型链</li>
+                                <li>面向对象与继承</li>
+                                <li>this的理解</li>
+                                <li>引用&sol;深浅拷贝&sol;JavaScript中的参数传递规则</li>
+                                <li>Array相关API</li>
+                                <li>Date相关API</li>
+                                <li>异步编程&sol;promise</li>
+                            </ul>
+
+                            DOM
+                            <ul>
+                                <li>DOMReady</li>
+                                <li>DOM操作,增删改查遍历</li>
+                                <li>DOM继承层级</li>
+                                <li>DOM类型与相应的API</li>
+                                <li>事件与事件流</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="row bs-examples">
                         <div class="col-sm-6 col-md-4">
                             <div class="thumbnail thumbnail-card">
@@ -223,6 +298,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -264,6 +340,7 @@
     <link rel="stylesheet/less" href="../css/common.less">
     <link rel="stylesheet/less" href="css/day1Style.less">
     <script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
+    <script src="./js/day1.js"></script>
 
 </body>
 </html>

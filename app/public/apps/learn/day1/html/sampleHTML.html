@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+</head>
+<body>
+<h1>Welcome to HTML5</h1>
+
+<div>
+    <img src="../img/html5.png" alt="html5">
+    <p>Picture1-1: HTML5</p>
+    <input type="text" id="inputId">
+    <button onclick="handleClick()">Send</button>
+</div>
+
+<script>
+    function handleClick() {
+        var input = document.getElementById("inputId");
+        var text = input.value;
+        alert(text);
+    }
+
+</script>
+
+</body>
+</html>
