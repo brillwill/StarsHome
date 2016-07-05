@@ -262,11 +262,44 @@ h1 {color:blue}
                         </a>
                     </div>
                     <div class="alert alert-info">使用jQuery来做动画会更加方便</div>
-
+                    <h3>jQuery Checklist</h3>
+                    <div class="">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">1.选择网页元素
+                                <ul class="list-group">
+                                    <li class="list-group-item">CSS选择器:$('#myId');$('div.myClass');$('input[name=first]');...</li>
+                                    <li class="list-group-item">jQuery特有表达式:$('a:first');$('tr:odd');$('#myForm:input');$('div:visible');...</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item list-group-item-info">2.改变结果集
+                                <ul class="list-group">
+                                    <li class="list-group-item">过滤:$('div').has('p');$('div').eq(5);...</li>
+                                    <li class="list-group-item">遍历:$('div').next('p');$('div').parent();...</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">3.取值和赋值:.html()&nbsp;.text()&nbsp;.attr()&nbsp;.width()&nbsp;.height()&nbsp;.val()
+                            </li>
+                            <li class="list-group-item list-group-item-info">4.元素的操作:.insertAfter()&nbsp;.appendTo()&nbsp;...</li>
+                            <li class="list-group-item">5.元素的复制、删除和创建:.clone()&nbsp;.remove();&nbsp;.detach()&nbsp;.empty()</li>
+                            <li class="list-group-item list-group-item-info">6.工具方法:$.trim()&nbsp;$.each()&nbsp;$.inArray()&nbsp;$.isFunction()</li>
+                            <li class="list-group-item">7.事件操作:$('p').click()&nbsp;.focus()&nbsp;.hover()&nbsp;.toggle()...</li>
+                            <li class="list-group-item list-group-item-info">8.类操作方法:addClass()&nbsp;removeClass()&nbsp;.toggleClass()</li>
+                            <li class="list-group-item">9.Ajax相关:$.get()&nbsp;$.post()&nbsp;load()</li>
+                            <li class="list-group-item list-group-item-info">10.一些效果:.show()&nbsp;.hide()&nbsp;.fadeIn()&nbsp;.fadeOut()&nbsp;</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="bs-docs-section">
                     <h1 id="idSection4" class="page-header">4.练习</h1>
                     <!--<p class="lead">JavaScript 门槛并不高,用途确实很广</p>-->
+                    <h3><span class="glyphicon glyphicon-wrench"></span>&nbsp;动手练习</h3>
+                    <div>
+                        Side by Side 前端:提高颜值,增加动画。
+                    </div>
+                    <h3><span class="glyphicon glyphicon-question-sign"></span>&nbsp;算法思考题</h3>
+                    <div>
+                        如何在DOM结构中查找那个元素被点击到? 假设已知函数能计算出元素在屏幕上的几何位置。
+                    </div>
                 </div>
             </div>
 
