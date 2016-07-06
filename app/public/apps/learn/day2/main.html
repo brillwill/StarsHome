@@ -28,6 +28,39 @@
         <div class="row">
             <div class="col-md-9" role="main">
                 <div class="bs-docs-section">
+                    <h1 id="idSection0" class="page-header">0.开发环境安装</h1>
+                    <p class="lead">
+                        bower用来管理web的包管理工具
+                    </p>
+
+                    <h2 id="idSection0-1">Node/NPM</h2>
+                    <p>bower依赖于node,npm和git</p>
+                    <div class="pre">
+                        <a href="https://nodejs.org/en/download/"><cite>Node.js官网下载并安装</cite></a>
+                        <br>
+                        如何验证是否已经安装成功 <br>
+                        用node命令行检测版本号: <br>
+                        <code>node -v</code> <br>
+                        <code>npm -v</code>
+                    </div>
+
+                    <h2 id="idSection0-2">Bower安装</h2>
+                    <code>npm install -g bower</code> 在管理员权限下运行
+
+                    <h2 id="idSection0-3">Bower的使用</h2>
+                    <p>bower目录的设置在.bowerrc文件中定义</p>
+                    <div class="well">
+                        {
+                        "directory" : "public/lib"
+                        }
+                    </div>
+                    <p>初始化bower</p>
+                    <code>bower init</code>
+                    <p>安装模块</p>
+                    <code>bower install packagename --save</code>
+                </div>
+
+                <div class="bs-docs-section">
                     <h1 id="idSection1" class="page-header">1.CSS</h1>
                     <p class="lead">
                         提高颜值,&nbsp;给web添加样式与布局
@@ -256,7 +289,7 @@ h1 {color:blue}
                     <p class="lead">很容易学习的JavaScript库,极大地简化了编程</p>
                     <p>jQuery很容易上手,所以只需要一本简明教程和小示例即可:</p>
                     <div class="thumbnail thumbnail-card">
-                        <a href="http://www.runoob.com/jquery/jquery-tutorial.html">
+                        <a href="http://www.runoob.com/jquery/jquery-tutorial.html" target="_blank">
                             <img src="http://www.runoob.com/wp-content/themes/runoob/assets/img/runoob-logo.png" alt="Runoob">
                             <p>菜鸟教程</p>
                         </a>
@@ -307,6 +340,9 @@ h1 {color:blue}
                 <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
                     <ul class="nav bs-docs-sidenav">
                         <li class="active">
+                            <a href="#idSection0">工具安装</a>
+                        </li>
+                        <li>
                             <a href="#idSection1">CSS</a>
                             <ul class="nav">
                                 <li><a href="#idSection1-1">初始CSS</a></li>
