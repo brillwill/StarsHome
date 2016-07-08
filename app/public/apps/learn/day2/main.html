@@ -30,13 +30,13 @@
                 <div class="bs-docs-section">
                     <h1 id="idSection0" class="page-header">0.开发环境安装</h1>
                     <p class="lead">
-                        bower用来管理web的包管理工具
+                        bower是web项目的包管理工具
                     </p>
 
                     <h2 id="idSection0-1">Node/NPM</h2>
                     <p>bower依赖于node,npm和git</p>
                     <div class="pre">
-                        <a href="https://nodejs.org/en/download/"><cite>Node.js官网下载并安装</cite></a>
+                        <a href="https://nodejs.org/en/download/" target="_blank"><cite class="important-link">Node.js官网下载并安装</cite></a>
                         <br>
                         如何验证是否已经安装成功 <br>
                         用node命令行检测版本号: <br>
@@ -48,7 +48,10 @@
                     <code>npm install -g bower</code> 在管理员权限下运行
 
                     <h2 id="idSection0-3">Bower的使用</h2>
-                    <p>bower目录的设置在.bowerrc文件中定义</p>
+                    <div class="alert alert-warning">
+                        bower的使用,建议首先将命令行切换至web工程所在的目录下进行(cd)。
+                    </div>
+                    <p>bower存放模块文件目录的设置在 <bold>.bowerrc</bold>文件中定义</p>
                     <div class="well">
                         {
                         "directory" : "public/lib"
@@ -56,8 +59,16 @@
                     </div>
                     <p>初始化bower</p>
                     <code>bower init</code>
+                    <br><br>
                     <p>安装模块</p>
                     <code>bower install packagename --save</code>
+                    <br><br>
+                    <p>各种命令参见:<a href="https://bower.io/docs/api/" target="_blank"> <cite class="important-link">Bower参考文档</cite> </a></p>
+                    <br>
+                    <div class="alert alert-info">
+                        编辑工具推荐使用WebStorm或者SublimeText <br>
+                        调试工具建议使用Chrome浏览器
+                    </div>
                 </div>
 
                 <div class="bs-docs-section">
