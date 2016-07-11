@@ -28,6 +28,21 @@
     <div class="row">
         <div class="col-md-9" role="main">
             <div class="bs-docs-section">
+                <h1 id="idSection0" class="page-header">0.文档工具</h1>
+                <p class="lead">查文档和动手写小例子是最好的学习方法</p>
+                <h3>推荐软件</h3>
+                <p>Mac:</p>
+                <a href="https://itunes.apple.com/cn/app/dash-3-api-docs-snippets/id449589707?mt=12" target="_blank">
+                    <cite class="important-link">Dash 3 <small>on App Store</small></cite>
+                </a>
+                <p>Windows:</p>
+                <a href="http://velocity.silverlakesoftware.com/" target="_blank">
+                    <cite class="important-link">Velocity <small>provided by Dash</small></cite>
+                </a>
+                <p>Online:</p>
+                <a href="http://devdocs.io/" target="_blank"><cite class="important-link">DevDocs.IO</cite></a>
+            </div>
+            <div class="bs-docs-section">
                 <h1 id="idSection1" class="page-header">1.MVC经典架构模型</h1>
                 <p class="lead">
                     这是一个关于如何去设计软件,组织内部结构的通用话题。
@@ -66,7 +81,7 @@
                     <capion>表1-1 Node.js安装</capion>
                     <thead>
                         <tr>
-                            <th>编号</th><th>名字</th><th>作用</th><th>是否必需</th>
+                            <th>编号</th><th>名字</th><th>作用</th><th>安装</th><th>是否必需</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,24 +89,28 @@
                             <td>1</td>
                             <td>Node.js</td>
                             <td>基于Chrome V8的JavaScript解释环境。</td>
+                            <td><a href="https://nodejs.org/en/download/">官网下载</a></td>
                             <td>是</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>Express模板</td>
-                            <td>一个简洁而灵活的 node.js Web应用框架</td>
+                            <td>Express模板生成器</td>
+                            <td>用于快速生成express模板的app</td>
+                            <td><code>npm install -g express-generator</code></td>
                             <td>是</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Node Inspector</td>
                             <td>基于web的调试工具</td>
+                            <td><code>npm install -g node-inspector</code></td>
                             <td>否</td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>Node Supervisor</td>
-                            <td>用来实时监测文件修改并重启node应用的辅助软件</td>
+                            <td>实时监测文件修改并重启node应用</td>
+                            <td><code>npm install -g supervisor</code></td>
                             <td>否</td>
                         </tr>
                     </tbody>
@@ -108,7 +127,6 @@
                 <h3 id="idSection2-4">Express</h3>
                 <div class="alert alert-info">
                     创建Express项目 <br>
-                    安装 <code>npm install -g express-generator</code><br>
                     <code>D:\demo&gt;express app</code>
                 </div>
                 <div class="well">
@@ -130,7 +148,7 @@
                 <p class="lead">本节的大部分内容和参考手册,都可以在这里找到。</p>
                 <p><a href="http://www.runoob.com/nodejs/nodejs-tutorial.html" target="_blank"><cite>RUNOOB</cite></a></p>
 
-                <p><a href="https://nqdeng.github.io/7-days-nodejs/#2.5.1"><cite>七天学会Node.js</cite></a></p>
+                <p><a href="https://nqdeng.github.io/7-days-nodejs/#2.5.1" target="_blank"><cite>七天学会Node.js</cite></a></p>
             </div>
             <div class="bs-docs-section">
                 <h1 id="idSection4" class="page-header">4.练习</h1>
@@ -148,7 +166,8 @@
         <div class="col-md-3" role="complementary" id="sideNav">
             <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
                 <ul class="nav bs-docs-sidenav">
-                    <li class="active">
+                    <li class="active"><a href="#idSection0">文档工具</a></li>
+                    <li>
                         <a href="#idSection1">MVC经典架构模型</a>
                     </li>
                     <li class="">
