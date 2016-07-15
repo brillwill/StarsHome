@@ -17,10 +17,6 @@ function populateFooter() {
     });
 }
 
-function onContents() {
-    onPart(0);
-}
-
 function onPart(part) {
     var url = "html/page" + part + ".html";
     $.get(url, function (data) {
@@ -34,6 +30,17 @@ function onPart(part) {
     }
 }
 
+function onPageClicked(page) {
+    var url = window.location.href;
+    if (url.match(/page=/)){
+        url = url.replace(/\?page=(\d)/, "?page="+page);
+    }else{
+        url = url + "?page=" + page;
+    }
+
+    window.location.href = url;
+}
+
 $(function () {
     populateHeader();
     populateFooter();
@@ -44,6 +51,6 @@ $(function () {
         onPart(result[1]);
     }
     else {
-        onContents();
+        onPart(0);
     }
 });
