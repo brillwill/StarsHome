@@ -221,6 +221,50 @@
                 </tbody>
             </table>
         </div>
+
+        <div class="bs-docs-section">
+            <h1>需求讨论</h1>
+            <table class="table table-bordered">
+                <caption>表3&nbsp;关于需求的讨论记录</caption>
+                <thead>
+                    <th>日期</th>
+                    <th>发起人</th>
+                    <th>简单描述</th>
+                    <th>详细内容</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2016.7.22</td>
+                        <td>Ray</td>
+                        <td>关于角色、记录、投票等若干问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016072201')">查看</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <!-- Large modal -->
+    <div class="modal fade bs-example-modal-lg" id="idPage1MinutesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="idPage1ModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="idPage1MinutesBodyDiv">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>
