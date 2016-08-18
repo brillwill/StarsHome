@@ -12,7 +12,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sideNav">
 
 <header></header>
 
@@ -22,6 +22,140 @@
         <p>彻底抛弃jQuery,&nbsp;专为WebApp设计的JS框架</p>
     </div>
 </div>
+
+
+<!--main body of this page-->
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <h1 id="idSection1" class="page-header">1.AngularJS</h1>
+                <p class="lead">
+                    AngularJS 可以构建一个单一页面应用程序(SPAs：Single Page Applications)
+                </p>
+                <h2 id="idSecion1-1">Angular资料</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://toddmotto.com/ultimate-guide-to-learning-angular-js-in-one-day/" target="_blank">
+                        <cite>Ultimate Guide to Leaning AngularJS in One Day</cite>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://thinkster.io/a-better-way-to-learn-angularjs" target="_blank">
+                            <cite>A better way to learn anuglarjs</cite>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://github.com/jmcunningham/AngularJS-Learning" target="_blank"><cite>AngularJS学习资源</cite></a>
+                    </li>
+                </ul>
+                <h2 id="idSection1-2">学习要点</h2>
+                <div class="well">
+                    <ul>
+                        <li>AngularJS中是如何体现MVC的?</li>
+                        <li>如何定义和使用controller?</li>
+                        <li>如何定义一个module?</li>
+                        <li>学会使用数据绑定和内置的filter呈现数据:{{}}和ng-bind的区别</li>
+                        <li>Service有什么作用?如何定义和使用service?</li>
+                        <li>什么叫做依赖注入Dependency Injection?</li>
+                        <li>ng-repeat循环的使用</li>
+                        <li>ng-hide/ng-show的使用</li>
+                        <li>ng-change指令&nsbp;$watch</li>
+                        <li>$http</li>
+                        <li>自定义指令</li>
+                        <li>父子$scope的数据传递</li>
+                        <li>$q与promise object</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection2" class="page-header">2.Angular UI Router</h1>
+                <p class="lead">客户端单页面应用的一个路由框架</p>
+
+                <h2 id="idSection2-1">官网资源</h2>
+                <a href="https://github.com/angular-ui/ui-router" target="_blank"><cite>Angular UI Router @Github</cite></a>
+
+                <h2 id="idSection2-2">为什么使用UI Router</h2>
+                <div class="alert alert-info">
+                    <ul>
+                        <li>AJAX请求没法留下History记录</li>
+                        <li>用户无法直接通过URL进入应用中的制定页面(保存书签、分享链接)</li>
+                        <li>AJAX对SEO是个灾难</li>
+                        <li>AngularJS自带的router不支持嵌套</li>
+                    </ul>
+                </div>
+
+                <h2 id="idSection2-3">相关文章</h2>
+                <div>
+                    <a href="http://www.codeproject.com/Articles/842880/AngularJS-ui-router-nested-routes" target="_blank">
+                        <cite>AngularJS ui-router(nested routes)</cite>
+                    </a>
+                </div>
+
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection3" class="page-header">3.Bootstrap for Angular</h1>
+                <p class="lead">UI Bootstrap for Angular JS</p>
+                <div class="alert alert-info">
+                    不依赖于jQuery,直接基于Angular的指令实现
+                </div>
+
+                <a href="http://angular-ui.github.io/bootstrap/" target="_blank"><cite>Bootstrap Directives</cite></a>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection4" class="page-header">4.练习</h1>
+                <p class="lead"></p>
+                <h3><span class="glyphicon glyphicon-wrench"></span>&nbsp;动手练习</h3>
+                <div>
+                    Side by Side 前端改造成基于AngularJS的SPA
+                </div>
+                <h3><span class="glyphicon glyphicon-question-sign"></span>&nbsp;思考题</h3>
+                <div>
+                    如果SPA的应用,不小心被用户刷新了网页会怎样?
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3" role="complementary" id="sideNav">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
+                <ul class="nav bs-docs-sidenav">
+                    <li class="active">
+                        <a href="#idSection1">AngularJS</a>
+                        <ul class="nav">
+                            <li><a href="#idSecion1-1">Angular资料</a></li>
+                            <li><a href="#idSecion1-2">学习要点</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection2">Angular UI Router</a>
+                        <ul class="nav">
+                            <li><a href="#idSection2-1">官网资源</a></li>
+                            <li><a href="#idSection2-2">为什么使用UI Router</a></li>
+                            <li><a href="#idSection2-3">相关文章</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection3">Bootstrap for Angular</a>
+                    </li>
+                    <li class="">
+                        <a href="#idSection4">练习</a>
+                        <ul class="nav">
+                            <li><a href="#idSection4-1">动手练习</a></li>
+                            <li><a href="#idSection4-2">思考题</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <a class="back-to-top" href="#top">
+                    返回顶部
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--end of main body content-->
+
+
 
 <footer></footer>
 <script>

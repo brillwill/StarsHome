@@ -12,24 +12,387 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sideNav">
 
-<header></header>
+    <header></header>
 
-<div class="bs-docs-header" id="content" tabindex="-1">
-    <div class="container">
-        <h1>Web前端技术</h1>
-        <p>HTML5技术集给用户带来前了所未有的极致WebApp体验</p>
+    <div class="bs-docs-header" id="content" tabindex="-1">
+        <div class="container">
+            <h1>Web前端技术</h1>
+            <p>HTML5技术集给用户带来前了所未有的极致WebApp体验</p>
+        </div>
     </div>
-</div>
 
-<footer></footer>
-<script>
-    commonDOMInitWithPagePath('../');
-</script>
+    <!--main body of this page-->
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9" role="main">
+                <div class="bs-docs-section">
+                    <h1 id="idSection0" class="page-header">0.开发环境安装</h1>
+                    <p class="lead">
+                        bower是web项目的包管理工具
+                    </p>
 
-<link rel="stylesheet/less" href="../css/common.less">
-<script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
+                    <h2 id="idSection0-1">Node/NPM</h2>
+                    <p>bower依赖于node,npm和git</p>
+                    <div class="pre">
+                        <a href="https://nodejs.org/en/download/" target="_blank"><cite class="important-link">Node.js官网下载并安装</cite></a>
+                        <br>
+                        如何验证是否已经安装成功 <br>
+                        用node命令行检测版本号: <br>
+                        <code>node -v</code> <br>
+                        <code>npm -v</code>
+                    </div>
+
+                    <h2 id="idSection0-2">Bower安装</h2>
+                    <code>npm install -g bower</code> 在管理员权限下运行
+
+                    <h2 id="idSection0-3">Bower的使用</h2>
+                    <div class="alert alert-warning">
+                        bower的使用,建议首先将命令行切换至web工程所在的目录下进行(cd)。
+                    </div>
+                    <p>bower存放模块文件目录的设置在 <bold>.bowerrc</bold>文件中定义</p>
+                    <div class="well">
+                        {
+                        "directory" : "public/lib"
+                        }
+                    </div>
+                    <p>初始化bower</p>
+                    <code>bower init</code>
+                    <br><br>
+                    <p>安装模块</p>
+                    <code>bower install packagename --save</code>
+                    <br><br>
+                    <p>各种命令参见:<a href="https://bower.io/docs/api/" target="_blank"> <cite class="important-link">Bower参考文档</cite> </a></p>
+                    <br>
+                    <div class="alert alert-info">
+                        编辑工具推荐使用WebStorm或者SublimeText <br>
+                        调试工具建议使用Chrome浏览器
+                    </div>
+                </div>
+
+                <div class="bs-docs-section">
+                    <h1 id="idSection1" class="page-header">1.CSS</h1>
+                    <p class="lead">
+                        提高颜值,&nbsp;给web添加样式与布局
+                    </p>
+
+                    <h2 id="idSection1-1">初识CSS</h2>
+                    <div class="thumbnail">
+                        <img src="http://www.runoob.com/images/selector.gif" alt="CSS 结构">
+                        <p>图1-1 CSS结构</p>
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        Selector是一个表达式,&nbsp;用来选择要添加CSS的HTML元素。最常见的选择器是id选择器(#someId),
+                        &nbsp;和class选择器(.someClass)。实践中,我们经常会根据HTML元素的关系来
+                        <a href="http://www.runoob.com/css/css-combinators.html" target="_blank"><bold>组合使用</bold></a>。
+                        Declaration是CSS生命的内容,&nbsp;它由若干属性和值组成。
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        这行CSS的意思是,&nbsp;选择h1标题元素并把它(们)的颜色设为蓝色,&nbsp;字体大小设为12像素。
+                    </div>
+
+                    <h2 id="idSection1-2">CSS用起来</h2>
+                    <p>可以通过三种途径来应用CSS</p>
+                    <h3>外部样式表</h3>
+                    <p>大多采用这种方式,&nbsp;将CSS存成.css文件并引入到html中</p>
+                    <pre>
+&lt;head&gt;
+&lt;link rel="stylesheet" href="mystyle.css"&gt;
+&lt;&sol;head&gt;
+                    </pre>
+                    <h3>内联样式表</h3>
+                    <p>混杂在HTML的元素属性中, &nbsp;工程中不推荐这种,&nbsp;但有时候调试比较方便。</p>
+                    <pre>
+&lt;p style &equals; &quot;color:blue, margin-left:20px&quot;&gt;This is a paragraph.&lt;&sol;p&gt;
+                    </pre>
+                    <h3>内部样式表</h3>
+                    <p>将css以style元素的方式添加到html中,用的不是很多</p>
+                    <pre>
+&lt;head&gt;
+&lt;style&gt;
+h1 {color:blue}
+&lt;&sol;style&gt;
+&lt;&sol;head&gt;
+                    </pre>
+                    <div class="alert alert-warning" role="alert">
+                        <strong>层叠次序</strong> <br>
+                        当同一个HTML的元素被不止一个样式定义时候,&nbsp;谁会生效呢?&nbsp;答案是,&nbsp;在属性的粒度上层叠覆盖,&nbsp;后出现的优先级高。
+                        一般有以下原则:
+                        <ol>
+                            <li>浏览器缺省设置</li>
+                            <li>外部样式表</li>
+                            <li>内部样式表</li>
+                            <li>内联样式</li>
+                        </ol>
+                        其中内联样式的优先级最高。
+                    </div>
+
+                    <h2 id="idSection1-3">CSS盒子模型</h2>
+                    <p>浏览器中的元素都是以矩形模型来渲染的,&nbsp;因此它可以有一下度量:</p>
+                    <div class="thumbnail">
+                        <img src="http://www.runoob.com/images/box-model.gif" alt="CSS 盒子模型">
+                        <p>图1-2 CSS盒子模型</p>
+                    </div>
+                    <p>在考虑元素宽度和高度的时候,&nbsp;需要结合盒子模型,&nbsp;来设置width padding border margin</p>
+
+                    <h2 id="idSection1-4">CSS布局</h2>
+                    <h3>Display和Visibility</h3>
+                    <p>Display属性用来提示元素如何被显示,会影响布局。Visibility定义元素是否可见,即使不可见也不影响布局。</p>
+                    <div class="alert alert-info" role="alert">
+                        <ul>
+                            <li>display:none与visibility:hidden</li>
+                            <li>display:block&nbsp;占用全部的宽度,有换行</li>
+                            <li>display:inline&nbsp;占用必要的宽度,无换行</li>
+                        </ul>
+                    </div>
+                    <h3>定位Position</h3>
+                    <table class="table table-bordered table-striped">
+                        <caption>表1-1 四中定位方式</caption>
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>设置</th>
+                                <th>是否在正常流中</th>
+                                <th>left&sol;right&sol;top&sol;down&sol;的作用</th>
+                                <th>备注</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>position:static</td>
+                                <td>是</td>
+                                <td>没有作用</td>
+                                <td>默认值</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>position:fixed</td>
+                                <td>否</td>
+                                <td>相对于浏览器的位置</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>position:relative</td>
+                                <td>是</td>
+                                <td>相对于流中正常值的位置</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>position:absolute</td>
+                                <td>否</td>
+                                <td>相对于已定位的父元素的位置</td>
+                                <td>没有这样的父元素,就相对于html</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="alert alert-info">
+                        重叠的情况<br>
+                        z-index属性定义了顺序,越大越叠在上面
+                    </div>
+                    <h3>浮动float</h3>
+                    <p>
+                        <code>float:left</code><br>
+                        <code>float:right</code><br>
+                        元素的水平方向浮动，意味着元素只能左右移动而不能上下移动。<br>
+                        一个浮动元素会尽量向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。<br>
+                        浮动元素之后的元素将围绕它。<br>
+                        浮动元素之前的元素将不会受到影响。<br>
+                        如果图像是右浮动，下面的文本流将环绕在它左边. <br>
+                    </p>
+
+                    <h2 id="idSection1-5">CSS3动画</h2>
+                    <p>动画,就是定义某些值得渐进变化过程。</p>
+                    <div class="show-board">
+                        <div class="show-brick"></div>
+                    </div>
+                    CSS code:
+                    <pre>
+@keyframes moving {
+  from {
+    left: 0px;;
+  }
+
+  to {
+    left:200px;
+  }
+}
+
+@-webkit-keyframes moving {
+  from {
+    left: 0px;;
+  }
+
+  to {
+    left:200px;
+  }
+}
+
+.show-brick {
+  position: relative;
+  width:44px;
+  height:44px;
+  left:0px;
+  top:20px;
+  background-color: red;
+  -webkit-animation:moving 5s linear 3s infinite alternate;
+  animation:moving 5s linear 3s infinite alternate;
+}
+                    </pre>
+                </div>
+
+                <div class="bs-docs-section">
+                    <h1 id="idSection2" class="page-header">2.Bootstrap</h1>
+                    <p class="lead">简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</p>
+
+                    <h2 id="idSection2-1">使用起步</h2>
+                    <pre>
+<code class="language-html" data-lang="html"><span class="c">&lt;!-- 新 Bootstrap 核心 CSS 文件 --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- 可选的Bootstrap主题文件（一般不用引入） --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"</span><span class="nt">&gt;</span>
+
+<span class="c">&lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="c">&lt;!-- 最新的 Bootstrap 核心 JavaScript 文件 --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></code>
+                    </pre>
+                    <div class="alert alert-info">
+                        也可以通过bower install bootstrap或者npm install bootstrap安装到本地
+                    </div>
+                    <h2 id="idSection2-2">一起来看中文官网</h2>
+                    <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline boot-icon">
+                     <a href="http://v3.bootcss.com/" target="_blank">B</a>
+                    </span>
+                    <h2 id="idSection2-3">重点理解</h2>
+                    <p>我们建议全面学习Bootstrap中的各个部分,此处列出的是需要特别重点理解的内容。</p>
+                    <ul class="well text-well">
+                        <li>全局CSS样式
+                            <ul>
+                                <li>栅格系统</li>
+                                <li>排版</li>
+                                <li>表单</li>
+                                <li>图片</li>
+                                <li>辅助类</li>
+                                <li>响应式工具</li>
+                            </ul>
+                        </li>
+                        <li>组件
+                            <ul>
+                                <li>下拉菜单</li>
+                                <li>导航</li>
+                                <li>导航条</li>
+                                <li>缩略图</li>
+                                <li>媒体对象</li>
+                            </ul>
+                        </li>
+                        <li>JavaScript插件&nbsp;-&nbsp;全部都要好好理解</li>
+                    </ul>
+            </div>
+
+                <div class="bs-docs-section">
+                    <h1 id="idSection3" class="page-header">3.jQuery</h1>
+                    <p class="lead">很容易学习的JavaScript库,极大地简化了编程</p>
+                    <p>jQuery很容易上手,所以只需要一本简明教程和小示例即可:</p>
+                    <div class="thumbnail thumbnail-card">
+                        <a href="http://www.runoob.com/jquery/jquery-tutorial.html" target="_blank">
+                            <img src="http://www.runoob.com/wp-content/themes/runoob/assets/img/runoob-logo.png" alt="Runoob">
+                            <p>菜鸟教程</p>
+                        </a>
+                    </div>
+                    <div class="alert alert-info">使用jQuery来做动画会更加方便</div>
+                    <h3>jQuery Checklist</h3>
+                    <div class="">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">1.选择网页元素
+                                <ul class="list-group">
+                                    <li class="list-group-item">CSS选择器:$('#myId');$('div.myClass');$('input[name=first]');...</li>
+                                    <li class="list-group-item">jQuery特有表达式:$('a:first');$('tr:odd');$('#myForm:input');$('div:visible');...</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item list-group-item-info">2.改变结果集
+                                <ul class="list-group">
+                                    <li class="list-group-item">过滤:$('div').has('p');$('div').eq(5);...</li>
+                                    <li class="list-group-item">遍历:$('div').next('p');$('div').parent();...</li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">3.取值和赋值:.html()&nbsp;.text()&nbsp;.attr()&nbsp;.width()&nbsp;.height()&nbsp;.val()
+                            </li>
+                            <li class="list-group-item list-group-item-info">4.元素的操作:.insertAfter()&nbsp;.appendTo()&nbsp;...</li>
+                            <li class="list-group-item">5.元素的复制、删除和创建:.clone()&nbsp;.remove();&nbsp;.detach()&nbsp;.empty()</li>
+                            <li class="list-group-item list-group-item-info">6.工具方法:$.trim()&nbsp;$.each()&nbsp;$.inArray()&nbsp;$.isFunction()</li>
+                            <li class="list-group-item">7.事件操作:$('p').click()&nbsp;.focus()&nbsp;.hover()&nbsp;.toggle()...</li>
+                            <li class="list-group-item list-group-item-info">8.类操作方法:addClass()&nbsp;removeClass()&nbsp;.toggleClass()</li>
+                            <li class="list-group-item">9.Ajax相关:$.get()&nbsp;$.post()&nbsp;load()</li>
+                            <li class="list-group-item list-group-item-info">10.一些效果:.show()&nbsp;.hide()&nbsp;.fadeIn()&nbsp;.fadeOut()&nbsp;</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="idSection4" class="page-header">4.练习</h1>
+                    <!--<p class="lead">JavaScript 门槛并不高,用途确实很广</p>-->
+                    <h3><span class="glyphicon glyphicon-wrench"></span>&nbsp;动手练习</h3>
+                    <div>
+                        Side by Side 前端:提高颜值,增加动画。
+                    </div>
+                    <h3><span class="glyphicon glyphicon-question-sign"></span>&nbsp;算法思考题</h3>
+                    <div>
+                        如何在DOM结构中查找那个元素被点击到? 假设已知函数能计算出元素在屏幕上的几何位置。
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3" role="complementary" id="sideNav">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
+                    <ul class="nav bs-docs-sidenav">
+                        <li class="active">
+                            <a href="#idSection0">工具安装</a>
+                        </li>
+                        <li>
+                            <a href="#idSection1">CSS</a>
+                            <ul class="nav">
+                                <li><a href="#idSection1-1">初始CSS</a></li>
+                                <li><a href="#idSection1-2">CSS用起来</a></li>
+                                <li><a href="#idSection1-3">CSS盒子模型</a></li>
+                                <li><a href="#idSection1-4">CSS布局</a></li>
+                                <li><a href="#idSection1-5">CSS3动画</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="#idSection2">Bootstrap</a>
+                        </li>
+                        <li class="">
+                            <a href="#idSection3">jQuery</a>
+                        </li>
+                        <li class="">
+                            <a href="#idSection4">练习</a>
+                        </li>
+                    </ul>
+                    <a class="back-to-top" href="#top">
+                        返回顶部
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--end of main body content-->
+
+
+
+
+    <footer></footer>
+    <script>
+        commonDOMInitWithPagePath('../');
+    </script>
+
+    <link rel="stylesheet/less" href="../css/common.less">
+    <link rel="stylesheet/less" href="./css/day2Style.less">
+    <script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
 
 </body>
 </html>

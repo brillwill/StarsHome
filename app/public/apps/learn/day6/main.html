@@ -12,16 +12,304 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sideNav">
 
 <header></header>
 
 <div class="bs-docs-header" id="content" tabindex="-1">
     <div class="container">
-        <h1>Mobile App</h1>
-        <p>不仅仅只是在手机上打开浏览器而已</p>
+        <h1>Hybrid app and Agile</h1>
+        <p>不仅仅只是在手机上打开浏览器而已&nbsp;迷人的Agile</p>
     </div>
 </div>
+
+<!--main body of this page-->
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-9" role="main">
+            <div class="bs-docs-section">
+                <h1 id="idSection1" class="page-header">1.Hybrid Mobile</h1>
+                <p class="lead">
+                    使用Web技术进行智能手机应用跨平台开发。
+                </p>
+
+                <h2 id="idSection1-1">Apache Cordova</h2>
+                <h3>安装Cordova</h3>
+                <p>Mac安装</p>
+                <pre><code class="language-bash" data-lang="bash">   <span class="nv">$ </span>sudo npm install -g cordova</code></pre>
+                <p>Windows安装</p>
+                <pre><code class="language-" data-lang="">   C:\&gt;npm install -g cordova</code></pre>
+                    
+                <h3>Cordova架构</h3>
+                <div class="thumbnail">
+                    <img src="http://cordova.apache.org/static/img/guide/cordovaapparchitecture.png" alt="Codova架构">
+                    <p>图1-1 Cordova架构图</p>
+                </div>
+                <h3>Cordova使用</h3>
+                <div>
+                    <a href="http://cordova.apache.org/docs/en/latest/guide/cli/index.html"><cite class="important-link">用命令行使用Cordova</cite></a>
+                </div>
+
+                <h2 id="idSection1-2">Ionic Framework</h2>
+                <p>基于Cordova, AngularJS的类似iOS</p>
+                <div>
+                    <a href="http://ionicframework.com/getting-started/"><cite class="important-link">Getting Started for Ionic</cite></a>
+                </div>
+
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection2" class="page-header">2.Agile</h1>
+                <p class="lead">敏捷开发以用户的需求进化为核心，采用迭代、循序渐进的方法进行软件开发</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+                            <img src="http://g.hiphotos.baidu.com/baike/pic/item/8b82b9014a90f6036d234e373912b31bb051ed2b.jpg" alt="产品开发">
+                            <p>图2-1 Agile模式产品开发</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+                            <img src="http://h.hiphotos.baidu.com/baike/pic/item/c83d70cf3bc79f3d77e6fe9bb9a1cd11728b2911.jpg" alt="软件开发">
+                            <p>图2-2 Agile软件开发</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 id="idSection2-1">价值观</h2>
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-success">沟通:团队内部,以及与其他stakeholder</li>
+                    <li class="list-group-item">简单:建模成为简化软件和开发的关键,一两张图代替十几至几百行代码</li>
+                    <li class="list-group-item list-group-item-success">反馈:过度自信是编程的职业病，反馈则是其处方 <small>-极限编程</small></li>
+                    <li class="list-group-item">勇气:勇于改变,拥抱变化</li>
+                    <li class="list-group-item list-group-item-success">谦逊:最优秀的开发人员都拥有谦逊的美德，他们总能认识到自己并不是无所不知的</li>
+                </ul>
+                <h2 id="idSection2-2">agile的误解</h2>
+                <div class="">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-remove"></span>&nbsp;Agile是银弹</li>
+                        <li class="list-group-item"><span class="glyphicon glyphicon-remove"></span>&nbsp; Agile不需要写文档</li>
+                        <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-remove"></span>&nbsp;Agile不需要做计划</li>
+                        <li class="list-group-item"><span class="glyphicon glyphicon-remove"></span>&nbsp;Agile不需要</li>
+                        <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-remove"></span>&nbsp;Agile不需要严格的纪律</li>
+                        <li class="list-group-item"><span class="glyphicon glyphicon-remove"></span>&nbsp;Agile需要更多的工作量</li>
+                        <li class="list-group-item list-group-item-warning"><span class="glyphicon glyphicon-remove"></span>&nbsp;Agile不需要架构设计</li>
+                        <li class="list-group-item"><span class="glyphicon glyphicon-remove"></span>&nbsp;Agile没法大规模应用</li>
+                    </ul>
+                </div>
+                <h2 id="idSection2-3">项目的铁三角模型</h2>
+                <div class="thumbnail">
+                    <img src="./img/triangle.png" alt="铁三角">
+                    <p>图2-3 铁三角模型</p>
+                </div>
+
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection3" class="page-header">3.Agile实践</h1>
+                <p class="lead">我们是如何来实践敏捷开发的</p>
+                <h2 id="idSection3-1">不同的组织类型</h2>
+                <table class="table table-bordered table-striped">
+                    <caption>表3-1 组织类型与项目经理</caption>
+                    <thead>
+                        <tr>
+                            <th>类型</th>
+                            <th>项目经理职责</th>
+                            <th>释义</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>职能型</td>
+                            <td>
+                                <ul class="list-group">
+                                    <li class="list-group-item">项目决策需要与职能经理确认</li>
+                                    <li class="list-group-item">作为助手协助职能经理完成工作</li>
+                                    <li class="list-group-item">大量时间在做行政任务,通常只有少量时间投入项目</li>
+                                    <li class="list-group-item">往往是项目联络人</li>
+                                </ul>
+                            </td>
+                            <td>
+                                所有事物由职能经理全权负责。项目往往在一个部门内完成。
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>弱矩阵型</td>
+                            <td>
+                                <ul class="list-group">
+                                    <li class="list-group-item">有一些权利但不负责资源</li>
+                                    <li class="list-group-item">重大决策仍要在职能经理的认可下做出</li>
+                                </ul>
+                            </td>
+                            <td>
+                                可以是项目协调人(往往需要向更高层经理报告)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>平衡矩阵型</td>
+                            <td>
+                                <ul class="list-group">
+                                    <li class="list-group-item">项目经理与职能经理分享权力</li>
+                                    <li class="list-group-item">项目经理要分担职能经理的人员管理决策</li>
+                                    <li class="list-group-item">职能经理也要参与项目经理的项目决策</li>
+                                </ul>
+                            </td>
+                            <td>
+                                项目成员要同时向项目经理以及职能经理汇报
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>强矩阵</td>
+                            <td>
+                                <ul class="list-group">
+                                    <li class="list-group-item">项目经理比职能经理的权力大</li>
+                                    <li class="list-group-item">团队仍然要向两者汇报</li>
+                                    <li class="list-group-item">根据团队在项目中以及职能领域的绩效作出评价</li>
+                                </ul>
+                            </td>
+                            <td>
+                                项目的交付最为重要
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>项目型</td>
+                            <td>
+                                <ul class="list-group">
+                                    <li class="list-group-item">团队按项目组织,项目完成团队解散,成员转入下一个项目</li>
+                                    <li class="list-group-item">项目经理做出项目的预算、进度、质量、资源的全部决策</li>
+                                    <li class="list-group-item">项目经理对项目成败负责</li>
+                                </ul>
+                                <td>
+                                    咨询公司往往采用这个组织模式
+                                </td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="idSection3-2">我们项目中的各种角色</h2>
+                <table class="table table-bordered table-striped">
+                    <caption>表3-2 角色释义表</caption>
+                    <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>职责内容</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PM 项目经理</td>
+                            <td>负责项目的整体预算、进度、资源、质量</td>
+                            <td>项目负责人</td>
+                        </tr>
+                        <tr>
+                            <td>Architect 架构师</td>
+                            <td>负责需求分析,系统建模,架构定义,技术选型,并指导开发人员进行开发实现</td>
+                            <td>体系架构负责人</td>
+                        </tr>
+                        <tr>
+                            <td>PO 产品经理</td>
+                            <td>负责项目中的需求、业务定义、优先级、以及验收</td>
+                            <td>产品负责人</td>
+                        </tr>
+                        <tr>
+                            <td>ScrumMaster 敏捷组长</td>
+                            <td>负责团队的对外接口,以及保障agile流程的正常运作</td>
+                            <td>agile实践负责人</td>
+                        </tr>
+                        <tr>
+                            <td>UX设计人员</td>
+                            <td>负责用户体验,视觉及交互设计</td>
+                            <td>颜值负责人</td>
+                        </tr>
+                        <tr>
+                            <td>Dev 开发人员</td>
+                            <td>负责完成相关开发、集成以及部署任务</td>
+                            <td>代码、模块负责人</td>
+                        </tr>
+                        <tr>
+                            <td>Test 测试人员</td>
+                            <td>负责保证产品质量达到PO的要求</td>
+                            <td>质量负责人</td>
+                        </tr>
+                        <tr>
+                            <td>Operator 运营人员</td>
+                            <td>负责产品上线后的正常运营,用户反馈,以及市场推广</td>
+                            <td>运营负责人</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 id="idSection3-3">Agile中的活动</h2>
+                <p>Scrum中的流程</p>
+                <div class="thumbnail">
+                    <img src="./img/scrum.png" alt="scrum meetings">
+                    <p>图3-1 crum模型</p>
+                </div>
+                <p>Scrum中使用的工具</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+                            <img src="./img/kanban.jpg" alt="kanban">
+                            <p>图3-2 ScrumKanban</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="thumbnail">
+                            <img src="./img/burn.jpeg" alt="burn down">
+                            <p>图3-3 Scrum燃尽图</p>
+                        </div>
+                    </div>
+                </div>
+                <h2 id="idSection3-4">Agile学习资料</h2>
+                <div>
+                    <a href="http://www.agilenutshell.com/" target="_blank"><cite class="important-link">Agile in a nutshell</cite></a> <br>
+                    <a href="https://www.scrumalliance.org/" target="_blank"><cite class="important-link">Scrum Alliance</cite></a>
+                </div>
+            </div>
+            <div class="bs-docs-section">
+                <h1 id="idSection4" class="page-header">4.练习</h1>
+                <p class="lead">agile的优缺点是什么?</p>
+            </div>
+        </div>
+
+        <div class="col-md-3" role="complementary" id="sideNav">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="300">
+                <ul class="nav bs-docs-sidenav">
+                    <li class="active">
+                        <a href="#idSection1">Hybrid Mobile</a>
+                        <ul class="nav">
+                            <li><a href="#idSection1-1">Apache Cordova</a></li>
+                            <li><a href="#idSection1-2">Ionic Framework</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection2">Agile</a>
+                        <ul class="nav">
+                            <li><a href="#idSection2-1">价值观</a></li>
+                            <li><a href="#idSection2-2">agile的误解</a></li>
+                            <li><a href="#idSection2-3">项目的铁三角模型</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection3">Agile实践</a>
+                        <ul class="nav">
+                            <li><a href="#idSection3-1">不同的组织类型</a></li>
+                            <li><a href="#idSection3-2">各种角色</a></li>
+                            <li><a href="#idSection3-3">Agile中的活动</a></li>
+                            <li><a href="#idSection3-4">Agile学习资料</a></li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#idSection4">练习</a>
+                    </li>
+                </ul>
+                <a class="back-to-top" href="#top">
+                    返回顶部
+                </a>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--end of main body content-->
 
 <footer></footer>
 <script>

@@ -1,0 +1,335 @@
+<div>
+    <div class="bs-docs-header" id="content" tabindex="-1">
+        <div class="container">
+            <h1>Product Backlog</h1>
+            <p>从用户的角度看我们要做一个怎样的产品</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bs-docs-section">
+            <h1>项目代号:Meeting</h1>
+            <p class="lead">用科技的手段更好的辅助掌控会议议程, 并提供记录者、参与者工具,以更好的提高会议效率。</p>
+
+        </div>
+
+        <div class="bs-docs-section">
+            <h1>用户类型</h1>
+            <table class="table table-bordered">
+                <caption>表1&nbsp;用户角色表</caption>
+                <thead>
+                <th>代号</th>
+                <th>名字</th>
+                <th>描述</th>
+                <th>优先级</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><strong>H</strong>ost</td>
+                    <td>主持人</td>
+                    <td>负责会议的议程的起草,发起并主持会议,协调时间,发出会议记录。也是会议的参与者。</td>
+                    <td>高</td>
+                </tr>
+                <tr>
+                    <td><strong>R</strong>ecorder</td>
+                    <td>记录员</td>
+                    <td>根据会议议程,记录会议要点,整理会议记录。可以是参与者,也可以是列席者。</td>
+                    <td>高</td>
+                </tr>
+                <tr>
+                    <td><strong>A</strong>ttendee</td>
+                    <td>参会者</td>
+                    <td>会议的一般参与者,有会议投票权</td>
+                    <td>中</td>
+                </tr>
+                <tr>
+                    <td><strong>O</strong>bserver</td>
+                    <td>列席者</td>
+                    <td>参加会议,但没有投票权</td>
+                    <td>中</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bs-docs-section">
+            <h1>UserStory</h1>
+            <table class="table table-bordered table-striped">
+                <caption>表2 Backlog - 按优先级排序</caption>
+                <thead>
+                <th>序号</th>
+                <th>As a</th>
+                <th>I want</th>
+                <th>so that</th>
+                <th>简称</th>
+                <th>点数</th>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>各用户</td>
+                    <td>使用"统一用户系统"中已有的用户名和密码登陆</td>
+                    <td>系统能够知道我是谁</td>
+                    <td>登录</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>主持人</td>
+                    <td>在电脑上设置会议议程和各项预计时间</td>
+                    <td>列席者和参会者能够提前预习会议内容</td>
+                    <td>议程</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>主持人</td>
+                    <td>会前设定一些会议中的要解决的关键问题</td>
+                    <td>提示记录员针对这些问题的讨论结果做重点记录</td>
+                    <td>关键问题</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>主持人</td>
+                    <td>预定会议并设置提醒</td>
+                    <td>列席者和参会者都能被邮件通知到</td>
+                    <td>邀请</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>主持人</td>
+                    <td>在会议进行中,根据议程设定提示我时间</td>
+                    <td>能更好的掌握会议的进程</td>
+                    <td>倒计时</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>主持人</td>
+                    <td>在我认为合适的情况下,延长或提前结束某个议程,或直接结束会议</td>
+                    <td>更有灵活性</td>
+                    <td>干预</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>记录员</td>
+                    <td>在会议中记录针对议程的一些关键讨论点</td>
+                    <td>会后能够想的起来,进一步整理成记录</td>
+                    <td>笔记</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>记录员</td>
+                    <td>在会议中能标记关键问题是否有讨论结论,记录结论是什么</td>
+                    <td>能重点记录关键问题,不至于漏记重要信息</td>
+                    <td>关键问题标记</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>记录员</td>
+                    <td>会后我能根据各项议程笔记,丰富语句和表述</td>
+                    <td>系统自动生成会议记录提交给主持人审阅</td>
+                    <td>会议记录生成</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>主持人</td>
+                    <td>会议结束后,审阅记录员提交的会议记录草稿,批准或者拒绝</td>
+                    <td>保证会议记录的真实完整性</td>
+                    <td>审阅</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>主持人</td>
+                    <td>能够直接发送记录员提交的会议记录给参会者、列席者(可选)</td>
+                    <td>会议的内容能落到纸上</td>
+                    <td>发送会议记录</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>参与者、列席者</td>
+                    <td>向主持人发送一些消息</td>
+                    <td>偷偷提醒主持人某些事项,或者问问题</td>
+                    <td>纸条</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>主持人</td>
+                    <td>发起一次投票</td>
+                    <td>让与会者参与选举或者表决</td>
+                    <td>新建投票</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>记录员</td>
+                    <td>系统进行匿名投票,并记录结果,或者手工输入离线的结果</td>
+                    <td>完成匿名投票</td>
+                    <td>匿名投票</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>记录员</td>
+                    <td>快速记录会议中的举手投票结果</td>
+                    <td>完成记名投票</td>
+                    <td>举手投票</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>参与者</td>
+                    <td>能够通过手机完成匿名投票</td>
+                    <td>开会时候方便</td>
+                    <td>手机匿名投票</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>参与者、列席者</td>
+                    <td>能够请代理在参与、列些会议</td>
+                    <td>应对会议冲突或者太忙的情况</td>
+                    <td>代理</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>记录员</td>
+                    <td>在会议进行中,选择性的开启和关闭录音功能</td>
+                    <td>完整的记录,同时又剔除无用信息</td>
+                    <td>录音</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>记录员</td>
+                    <td>在会议结束后,选择性播放录音功能</td>
+                    <td>回忆回忆内容</td>
+                    <td>播放录音</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>记录员</td>
+                    <td>对于已批准的会议记录,代为主持人发送给参加者、列席者(可选)</td>
+                    <td>顶替主持人没有时间的情况</td>
+                    <td>代发会议记录</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>参与者</td>
+                    <td>在会议结束前,向主持人建议邀请新人参与会议</td>
+                    <td>找到主持人可能漏掉的</td>
+                    <td>建议邀请</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>主持人</td>
+                    <td>收到建议邀请后,决定是否采用其建议</td>
+                    <td>新人能够参会并能够投票</td>
+                    <td>决定建议邀请</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bs-docs-section">
+            <h1>需求讨论</h1>
+            <table class="table table-bordered">
+                <caption>表3&nbsp;关于需求的讨论记录</caption>
+                <thead>
+                    <th>日期</th>
+                    <th>发起人</th>
+                    <th>简单描述</th>
+                    <th>详细内容</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2016.7.22</td>
+                        <td>Ray</td>
+                        <td>关于角色、记录、投票等若干问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016072201')">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td>2016.7.24</td>
+                        <td>Ray</td>
+                        <td>关于会议发起者,代理,规模等若干问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016072401')">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td>2016.7.25</td>
+                        <td>Ray</td>
+                        <td>关于议程、关键问题、投票等若干问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016072501')">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td>2016.7.28</td>
+                        <td>Ray</td>
+                        <td>关于投票问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016072801')">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td>2016.8.2</td>
+                        <td>Hahn</td>
+                        <td>关于议程问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016080201')">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td>2016.8.3</td>
+                        <td>Henry</td>
+                        <td>关于wireframe的问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016080301')">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td>2016.8.3</td>
+                        <td>Ankle</td>
+                        <td>关于会议列表的问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016080302')">查看</button></td>
+                    </tr>
+                    <tr>
+                        <td>2016.8.4</td>
+                        <td>Ray</td>
+                        <td>关于会议的结束时间、议程编辑等问题</td>
+                        <td><button class="btn btn-primary btn-sm" onclick="page1.handleMinutesDetail('2016080401')">查看</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Large modal -->
+    <div class="modal fade bs-example-modal-lg" id="idPage1MinutesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="idPage1ModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="idPage1MinutesBodyDiv">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
