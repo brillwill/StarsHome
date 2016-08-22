@@ -16,12 +16,37 @@
     <div class="bs-docs-header" id="content" tabindex="-1">
         <div class="container">
             <h1>3D展柜</h1>
-            <p>这是属于你的3D世界。您可以把您钟爱的物件方便的存放在这里。</p>
+            <p>这是属于你的3D世界。您可以把您钟爱的物件方便的存放在这里。<small>推荐使用Chrome, Safari浏览器</small></p>
         </div>
     </div>
 
     <div class="container bs-docs-container">
         <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-card col-xs-6 col-md-4">
+                    <!--<a onclick="presenter.show('Susan\'s House','http://www.ambiera.at/coppercube/demos/version5/sunsethouse/embedwebgl.html')">-->
+                    <a href="http://www.ambiera.at/coppercube/demos/version5/sunsethouse/embedwebgl.html" target="_blank">
+                        <img src="img/snapshot3.png" alt="House">
+                        <p>Susan's House</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-card col-xs-6 col-md-4">
+                    <a href="http://helloracer.com/webgl/" target="_blank">
+                        <img src="img/snapshot2.png" alt="Car">
+                        <p>Mike with his Car</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail thumbnail-card col-xs-6 col-md-4">
+                    <a href="http://akirodic.com/p/jellyfish/" target="_blank">
+                        <img src="img/snapshot4.png" alt="Car">
+                        <p>Tom's Fishbowl</p>
+                    </a>
+                </div>
+            </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail thumbnail-card">
                     <a href="http://www.ambiera.at/coppercube/demos/version5/ocean/embedwebgl.html" target="_blank">
@@ -30,23 +55,6 @@
                     </a>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail thumbnail-card col-xs-6 col-md-4">
-                 <a href="http://helloracer.com/webgl/">
-                        <img src="img/snapshot2.png" alt="Car">
-                        <p>Mike with his Car</p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail thumbnail-card col-xs-6 col-md-4">
-                    <a href="http://www.ambiera.at/coppercube/demos/version5/sunsethouse/embedwebgl.html">
-                        <img src="img/snapshot3.png" alt="House">
-                        <p>Susan's house</p>
-                    </a>
-                </div>
-            </div>
-
         </div>
 
     </div>
@@ -67,7 +75,30 @@
         </div>
     </footer>
 
+
+    <div class="modal fade bs-example-modal-lg" id="idPresenterModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="idPresenterModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="idPresenterModalFrame" frameborder="0">
+
+                    </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <link rel="stylesheet/less" href="css/common.less">
     <script src="//cdn.bootcss.com/less.js/2.7.1/less.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
