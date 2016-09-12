@@ -14,17 +14,17 @@ exports.loginByWechat = function(code,callback) {
 	}
 
 
-	var req = http.request(options, (res) => {
+	var req = http.request(options, function(res){
 		  res.setEncoding('utf8');
-		  res.on('data', (chunk) => {
+		  res.on('data', function(chunk){
 		     callback(chunk);
 		  });
-		  res.on('end', () => {
+		  res.on('end', function(){
 		    console.log('No more data in response.');
 		  });
 		});
 
-		req.on('error', (e) => {
+		req.on('error', function(e){
 		  console.log(`problem with request: ${e.message}`);
 		});
 
