@@ -40,7 +40,7 @@ console.log("querys:".QueryString);
 if(QueryString.state !== undefined){
 	if(QueryString.code !== undefined){
 		$.post(
-			"http://www.xingyunzh.com/user/login/wechat",{
+			"http://www.xingyunzh.com/api/user/login/wechat",{
 				code:QueryString.code
 			},function(data){
 				console.log('data:',data);
