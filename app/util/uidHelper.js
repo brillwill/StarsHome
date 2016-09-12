@@ -9,7 +9,7 @@ exports.loginByWechat = function(code,callback) {
 		  	path: '/clduser/login/wechat',
 		  	method: 'POST',
 		  	headers: {
-		  	  'Content-Type': 'application/x-www-form-urlencoded'
+		  	  'Content-Type': 'application/json'
 		  	}
 	}
 
