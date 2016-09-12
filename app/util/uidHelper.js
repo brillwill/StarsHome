@@ -18,6 +18,7 @@ exports.loginByWechat = function(code,callback) {
 	var req = http.request(options, function(res){
 		  res.setEncoding('utf8');
 		  res.on('data', function(chunk){
+		  	console.log('chunk',chunk);
 		     callback(chunk);
 		  });
 		  res.on('end', function(){
