@@ -1,7 +1,7 @@
 var http = require('http');
 
 exports.loginByWechat = function(code,callback) {
-	var postData = JSON.stringify({"code":code});
+	var postData = {"code":code};
 
 	var options = {
 		hostname: 'www.xingyunzh.com',
@@ -9,7 +9,7 @@ exports.loginByWechat = function(code,callback) {
 		  	path: '/clduser/login/wechat',
 		  	method: 'POST',
 		  	headers: {
-		  	  'Content-Type': 'application/x-www-form-urlencoded'
+		  	  'Content-Type': 'application/json'
 		  	}
 	}
 
