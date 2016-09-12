@@ -16,21 +16,24 @@ exports.loginByWechat = function(code,callback) {
 
 
 	var req = http.request(options, function(res){
-		  res.setEncoding('utf8');
-		  res.on('data', function(chunk){
+		res.setEncoding('utf8');
+		
+		res.on('data', function(chunk){
 		  	console.log('chunk',chunk);
-		     callback(chunk);
-		  });
-		  res.on('end', function(){
+		  	callback(null,chunk);
+		});
+		  
+		res.on('end', function(){
 		    console.log('No more data in response.');
-		  });
 		});
+	});
 
-		req.on('error', function(e){
-		  console.log('problem with request:',e.message);
-		});
+	req.on('error', function(e){
+	  	console.log('problem with request:',e.message);
+	  	callback(e);
+	});
 
-		// write data to request body
-		req.write(postData);
-		req.end();
+	// write data to request body
+	req.write(postData);
+	req.end();
 }
