@@ -1,7 +1,8 @@
 var http = require('http');
+var queryString = require('querystring');
 
 exports.loginByWechat = function(code,callback) {
-	var postData = {"code":code};
+	var postData = queryString.stringify({'code':code});
 
 	var options = {
 		hostname: 'www.xingyunzh.com',
@@ -9,7 +10,7 @@ exports.loginByWechat = function(code,callback) {
 		  	path: '/clduser/login/wechat',
 		  	method: 'POST',
 		  	headers: {
-		  	  'Content-Type': 'application/json'
+		  	  'Content-Type': 'application/x-www-form-urlencoded'
 		  	}
 	}
 
@@ -25,7 +26,7 @@ exports.loginByWechat = function(code,callback) {
 		});
 
 		req.on('error', function(e){
-		  console.log('problem with request: ${e.message}');
+		  console.log('problem with request:',e.message);
 		});
 
 		// write data to request body
