@@ -25,7 +25,7 @@ exports.loginByWechat = function(code,callback) {
 		});
 
 		req.on('error', function(e){
-		  console.log(`problem with request: ${e.message}`);
+		  console.log('problem with request: ${e.message}');
 		});
 
 		// write data to request body
