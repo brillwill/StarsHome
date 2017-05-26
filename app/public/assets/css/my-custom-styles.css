@@ -1,0 +1,11 @@
+/* your custom styles here */
+
+img.x-img-logo {
+    height: 36px;
+    width: auto;
+    margin-top: -5px;
+}
+
+.x-border {
+    border: 2px solid #808080;
+}
