@@ -1712,6 +1712,7 @@ ul.social-icons li a i {
 /* general portfolio item with hovered caption */
 .portfolio-item {
   position: relative;
+
 }
 .portfolio-item .overlay {
   width: 100%;
@@ -1776,7 +1777,7 @@ ul.social-icons li a i {
 }
 
 .portfolio-nospace .portfolio-item {
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 .portfolio-static {
