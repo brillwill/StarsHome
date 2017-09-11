@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="assets/img/logo/logo2.png">
 </head>
 <body>
+
     <div class="container">
         <div class="row">
             <table class="table table-bordered table-striped">
@@ -28,8 +29,8 @@
                     <th>状态</th>
                 </tr>
                 </thead>
-                <tbody>
-                  <tr>
+                <tbody id="content">
+                  <!-- <tr>
                       <td style="text-align: center;width: 50px;">1</td>
                       <td>东龙社区</td>
                       <td>武汉市武昌区</td>
@@ -55,7 +56,7 @@
                     <td>尚之品包包店（含微信小程序）</td>
                     <td>武汉市武昌区司门口</td>
                     <td>2017.8.9</td>
-                    <td>进行中</td>
+                    <td>已完成</td>
                 </tr>
                 <tr>
                     <td style="text-align: center;width: 50px;">5</td>
@@ -76,13 +77,100 @@
                     <td>朝天门火锅司门口旗舰店</td>
                     <td>武汉市武昌区司门口</td>
                     <td>2017.8.21</td>
+                    <td>已完成</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;width: 50px;">8</td>
+                    <td>快乐方专业桌游吧定制小程序</td>
+                    <td>武汉市武昌区中南</td>
+                    <td>2017.9.8</td>
                     <td>进行中</td>
                 </tr>
-
+                <tr>
+                    <td style="text-align: center;width: 50px;">9</td>
+                    <td>雨莫宠物店（含微信小程序）</td>
+                    <td>武汉市武昌区秦园路</td>
+                    <td>2017.9.14</td>
+                    <td>进行中</td>
+                </tr> -->
                 </tbody>
             </table>
 
         </div>
     </div>
+
+    <script>
+      var content = document.getElementById("content");
+
+      var projects = [{
+        name:"雨莫宠物店（含微信小程序）",
+        location:"武汉市武昌区秦园路",
+        time:"2017.9.14",
+        status:"进行中"
+      },{
+        name:"快乐方专业桌游吧定制小程序",
+        location:"武汉市武昌区中南",
+        time:"2017.9.8",
+        status:"进行中"
+      },{
+        name:"朝天门火锅司门口旗舰店",
+        location:"武汉市武昌区司门口",
+        time:"2017.8.21",
+        status:"已完成"
+      },{
+        name:"尚之品包包店（含微信小程序）",
+        location:"武汉市武昌区司门口",
+        time:"2017.8.9",
+        status:"已完成"
+      },{
+        name:"快乐方桌游吧",
+        location:"武汉市武昌区中南",
+        time:"2017.7.30",
+        status:"已完成"
+      },{
+        name:"狗狗大人宠物酒店（含微信小程序）",
+        location:"武汉市洪山区杨园南路",
+        time:"2017.7.16",
+        status:"已完成"
+      },{
+        name:"曼果宠物乐园（含微信小程序）",
+        location:"武汉市武昌区百瑞景",
+        time:"2017.6.13",
+        status:"已完成"
+      },{
+        name:"东龙社区",
+        time:"2017.5.10",
+        location:"武汉市武昌区",
+        status:"已完成"
+      }]
+
+      for (index in projects) {
+        var node = document.createElement("tr");
+        var tdNo = document.createElement("td");
+        tdNo.style["text-align"] = "center";
+        tdNo.style.width = "50px";
+        var number = parseInt(index) + 1;
+        tdNo.innerHTML = number;
+        node.appendChild(tdNo);
+
+        var tdName = document.createElement("td");
+        tdName.innerHTML = projects[index].name;
+        node.appendChild(tdName);
+
+        var tdLocation = document.createElement("td");
+        tdLocation.innerHTML = projects[index].location;
+        node.appendChild(tdLocation);
+
+        var tdTime = document.createElement("td");
+        tdTime.innerHTML = projects[index].time;
+        node.appendChild(tdTime);
+
+        var tdStatus = document.createElement("td");
+        tdStatus.innerHTML = projects[index].status;
+        node.appendChild(tdStatus);
+
+        content.appendChild(node);
+      }
+    </script>
 </body>
 </html>
