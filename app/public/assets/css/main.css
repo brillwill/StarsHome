@@ -734,7 +734,7 @@ footer .logo {
 }
 
 /* ----------------------------------------------------- */
-/* HERO UNIT 
+/* HERO UNIT
 /* ----------------------------------------------------- */
 /* carousel */
 .carousel-control {
@@ -895,7 +895,7 @@ footer .logo {
 }
 
 /* ----------------------------------------------------- */
-/* BOOTSTRAP UI ELEMENTS 
+/* BOOTSTRAP UI ELEMENTS
 /* ----------------------------------------------------- */
 /* button */
 .btn {
@@ -1083,7 +1083,7 @@ div[class*="col-"] > .form-group {
 }
 
 /* ----------------------------------------------------- */
-/* UI ELEMENTS 
+/* UI ELEMENTS
 /* ----------------------------------------------------- */
 .btn-toggle,
 .btn-toggle.focus {
@@ -1303,7 +1303,7 @@ div[class*="col-"] > .form-group {
 }
 /* client logo list */
 .list-client-logo {
-  text-align: justify;
+  /*text-align: justify;*/
   margin-bottom: 0;
 }
 .list-client-logo:after {
@@ -1707,7 +1707,7 @@ ul.social-icons li a i {
   }
 }
 /* ----------------------------------------------------- */
-/* PORTFOLIO 
+/* PORTFOLIO
 /* ----------------------------------------------------- */
 /* general portfolio item with hovered caption */
 .portfolio-item {
@@ -1983,7 +1983,7 @@ ul.social-icons li a i {
 }
 
 /* ----------------------------------------------------- */
-/* BLOG 
+/* BLOG
 /* ----------------------------------------------------- */
 /* blog list */
 .blog a:hover, .blog a:focus {
@@ -2243,7 +2243,7 @@ ul.social-icons li a i {
 }
 
 /* --------------*/
-/* TYPOGRAPHY 
+/* TYPOGRAPHY
 /* -------------*/
 .text-body-color {
   color: #7b7b7b !important;
